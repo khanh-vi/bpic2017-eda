@@ -1,0 +1,19 @@
+# Python virtual environment
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# VSCode temporary files
+.vscode/
+**/tempCodeRunnerFile.py
+
+# Raw datasets
+data/*.xes
+data/*.xes.gz
+
+# OS
+.DS_Store
+Thumbs.db
