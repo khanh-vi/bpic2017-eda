@@ -1,0 +1,93 @@
+{
+  "baseline_version": "v1_part8",
+  "prediction_point": 10,
+  "positive_class": 1,
+  "positive_class_name": "Success",
+  "evaluation_split": "frozen_temporal_test_holdout",
+  "model_order": [
+    "dummy",
+    "logistic_regression",
+    "random_forest"
+  ],
+  "test_population": {
+    "cases": 6276,
+    "success": 3450,
+    "unsuccessful": 2826
+  },
+  "metric_definitions": {
+    "primary": "roc_auc",
+    "secondary": [
+      "average_precision",
+      "accuracy",
+      "precision",
+      "recall",
+      "f1",
+      "confusion_matrix"
+    ],
+    "average_precision": "scikit-learn average_precision_score; not trapezoidal PR area"
+  },
+  "metrics": [
+    {
+      "model": "dummy",
+      "roc_auc": 0.5,
+      "average_precision": 0.5497131931166348,
+      "accuracy": 0.5497131931166348,
+      "precision": 0.5497131931166348,
+      "recall": 1.0,
+      "f1": 0.7094386181369525
+    },
+    {
+      "model": "logistic_regression",
+      "roc_auc": 0.6002674954101151,
+      "average_precision": 0.6425684064989117,
+      "accuracy": 0.5811026131293817,
+      "precision": 0.5966564633859195,
+      "recall": 0.7344927536231884,
+      "f1": 0.658438352604911
+    },
+    {
+      "model": "random_forest",
+      "roc_auc": 0.5875780793255176,
+      "average_precision": 0.6301435500864094,
+      "accuracy": 0.5678776290630975,
+      "precision": 0.597567424643046,
+      "recall": 0.6550724637681159,
+      "f1": 0.625
+    }
+  ],
+  "cross_artifact_audit": {
+    "status": "PASS",
+    "numerical_tolerance": 1e-12,
+    "prediction_rows_per_model": 6276,
+    "case_id_order_identical": true,
+    "y_true_identical": true,
+    "target_distribution_verified": true,
+    "probabilities_finite_and_in_unit_interval": true,
+    "predicted_labels_binary": true,
+    "duplicate_case_ids": 0,
+    "recomputed_metrics_match_stored_metrics": true,
+    "plot_inputs": "saved prediction CSV files only"
+  },
+  "experiment_scope": {
+    "hyperparameter_tuning": false,
+    "cross_validation": false,
+    "class_rebalancing": false,
+    "threshold_optimization": false,
+    "shap": false,
+    "final_model_selection": false
+  },
+  "source_artifact_sha256": {
+    "results/baseline_v1/eligibility_summary.json": "674f9b389e5f4e05a6a96db355645d0cebdddc858a89efd2355ddaffc5cbce66",
+    "results/baseline_v1/feature_manifest.json": "3be21eff91574b7affb7636e5f96c9766a504ddc89ab343ca0cbd25200384a16",
+    "results/baseline_v1/split_summary.json": "79e4e1cf28ceae8d412cbf5723a81b6a6e87a926545574e67642affa05c853c1",
+    "results/baseline_v1/preprocessing_manifest.json": "e7c0cdcfae7d1d8d32d340371d31209fad0c8c4d33269822f07bea6257cf702f",
+    "results/baseline_v1/test_case_ids.csv": "a16351af6ed5d7c297ba9f652f05079c66925c3591f5de11f93530129cd90125",
+    "outputs/eda/target_distribution.csv": "2f0795b1a3bfbf9254708b2b7814359be06872747fd8ff711db65233062d67e7",
+    "results/baseline_v1/dummy_metrics.json": "4eea90f2d4350ba7c8bcb267a3a67e82de7d244c7edef01e8961bbfc3c4f67a1",
+    "results/baseline_v1/logistic_metrics.json": "eb3b12e0484c4ea910254263e95d534f75b81d09e19dcbd6db4c6f580f7a01c4",
+    "results/baseline_v1/random_forest_metrics.json": "f050c623e0bb2a7c25a570c252db930610322a05ba678d9383bc2d15a2e8a743",
+    "results/baseline_v1/dummy_predictions.csv": "3e4204d72866e5a88c52cc63ed65dfb9ff6065b42fcd2e331d6d9d7d9d24d157",
+    "results/baseline_v1/logistic_predictions.csv": "46ecf2f29cbb3ac1e19a5a8c8e6715886d53a4990560140f6f8edc22fd0485a8",
+    "results/baseline_v1/random_forest_predictions.csv": "425c12180e62617c716bbd0f9cadf3fb249c1c244c90fa9157cdf9e111d6d837"
+  }
+}
