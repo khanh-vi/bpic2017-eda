@@ -18,6 +18,7 @@ data/*.xes.gz
 data/processed/baseline_k10/X_*.npz
 data/processed/baseline_k10/y_*.npy
 artifacts/baseline_v1/*.joblib
+artifacts/shap_pilot_v1/*.joblib
 
 # OS
 .DS_Store
