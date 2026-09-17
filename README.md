@@ -297,3 +297,35 @@ Several workflow activities occur repeatedly within the same case. Predictive mo
 ## Detailed EDA Summary
 
 See [`EDA_SUMMARY.md`](EDA_SUMMARY.md) for the detailed EDA findings and analysis.
+
+## Project Status
+
+### Baseline V1 — Completed
+
+Prediction point: `k=10`
+
+Eligible cases: **31,376**
+
+Temporal split:
+- Train: **25,100**
+- Test: **6,276**
+
+Primary metric: **ROC-AUC**
+
+Baseline results:
+
+| Model | ROC-AUC | Average Precision |
+|---|---:|---:|
+| Dummy | 0.5000 | 0.5497 |
+| Logistic Regression | 0.6003 | 0.6426 |
+| Random Forest | 0.5876 | 0.6301 |
+
+Status:
+- Outcome leakage audit: PASS
+- Future-event leakage audit: PASS
+- Train-only preprocessing: PASS
+- Temporal holdout evaluation: completed
+- Hyperparameter tuning: not performed
+- SHAP analysis: not performed
+
+Detailed report: `results/baseline_v1/baseline_v1.md`
