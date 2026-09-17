@@ -1,0 +1,239 @@
+{
+  "experiment": "shap_pilot_v1",
+  "stage": "part_4_reporting_and_interpretation",
+  "builder_source_sha256": "1b7a87d0a47847a43c3a23b3cf5d9fa5bb91c1292cec0bc7682c5da01be8e0c6",
+  "shap_version": "0.52.0",
+  "positive_class": 1,
+  "shap_matrix_shape": [
+    1000,
+    165
+  ],
+  "explained_feature_matrix_shape": [
+    1000,
+    165
+  ],
+  "total_feature_importance": 0.27876531004635946,
+  "top_10_features": [
+    {
+      "rank": 1,
+      "feature": "requested_amount",
+      "mean_abs_shap": 0.026641277307657044
+    },
+    {
+      "rank": 2,
+      "feature": "mean_event_gap_seconds",
+      "mean_abs_shap": 0.016407594915129203
+    },
+    {
+      "rank": 3,
+      "feature": "prefix_duration_seconds",
+      "mean_abs_shap": 0.01603838946529006
+    },
+    {
+      "rank": 4,
+      "feature": "resource::User_1",
+      "mean_abs_shap": 0.011546640943758882
+    },
+    {
+      "rank": 5,
+      "feature": "activity::A_Submitted",
+      "mean_abs_shap": 0.011405730546778816
+    },
+    {
+      "rank": 6,
+      "feature": "activity::W_Handle leads",
+      "mean_abs_shap": 0.010695407067504171
+    },
+    {
+      "rank": 7,
+      "feature": "n_unique_resources",
+      "mean_abs_shap": 0.009614711880168866
+    },
+    {
+      "rank": 8,
+      "feature": "loan_goal_Home improvement",
+      "mean_abs_shap": 0.008855549185777679
+    },
+    {
+      "rank": 9,
+      "feature": "loan_goal_Car",
+      "mean_abs_shap": 0.007706117360581653
+    },
+    {
+      "rank": 10,
+      "feature": "application_type_New credit",
+      "mean_abs_shap": 0.0076144433572115245
+    }
+  ],
+  "feature_groups": [
+    {
+      "group": "Numeric",
+      "feature_count": 5,
+      "group_total_importance": 0.07360163427010925,
+      "group_mean_importance_per_feature": 0.01472032685402185,
+      "share_of_total_importance": 0.26402723587762444
+    },
+    {
+      "group": "LoanGoal",
+      "feature_count": 14,
+      "group_total_importance": 0.036123039339102346,
+      "group_mean_importance_per_feature": 0.0025802170956501676,
+      "share_of_total_importance": 0.12958226162751377
+    },
+    {
+      "group": "ApplicationType",
+      "feature_count": 2,
+      "group_total_importance": 0.014706432483988549,
+      "group_mean_importance_per_feature": 0.0073532162419942745,
+      "share_of_total_importance": 0.05275560463941094
+    },
+    {
+      "group": "Activity",
+      "feature_count": 14,
+      "group_total_importance": 0.04032411924816203,
+      "group_mean_importance_per_feature": 0.002880294232011574,
+      "share_of_total_importance": 0.14465257259397166
+    },
+    {
+      "group": "Action",
+      "feature_count": 5,
+      "group_total_importance": 0.013996866710167009,
+      "group_mean_importance_per_feature": 0.0027993733420334016,
+      "share_of_total_importance": 0.05021021700239277
+    },
+    {
+      "group": "EventOrigin",
+      "feature_count": 3,
+      "group_total_importance": 0.011193931654753098,
+      "group_mean_importance_per_feature": 0.003731310551584366,
+      "share_of_total_importance": 0.040155396856558355
+    },
+    {
+      "group": "Resource",
+      "feature_count": 115,
+      "group_total_importance": 0.06653696444293268,
+      "group_mean_importance_per_feature": 0.0005785822995037624,
+      "share_of_total_importance": 0.23868452079588884
+    },
+    {
+      "group": "Lifecycle",
+      "feature_count": 7,
+      "group_total_importance": 0.022282321897144505,
+      "group_mean_importance_per_feature": 0.003183188842449215,
+      "share_of_total_importance": 0.0799321906066393
+    }
+  ],
+  "local_examples": [
+    {
+      "category": "TP",
+      "sample_order": 0,
+      "case_id": "Application_1716488937",
+      "y_true": 1,
+      "y_pred": 1,
+      "model_probability_success": 0.6466666666666666
+    },
+    {
+      "category": "TN",
+      "sample_order": 5,
+      "case_id": "Application_626689908",
+      "y_true": 0,
+      "y_pred": 0,
+      "model_probability_success": 0.4166666666666667
+    },
+    {
+      "category": "FP",
+      "sample_order": 1,
+      "case_id": "Application_1780975856",
+      "y_true": 0,
+      "y_pred": 1,
+      "model_probability_success": 0.73
+    },
+    {
+      "category": "FN",
+      "sample_order": 8,
+      "case_id": "Application_1606123452",
+      "y_true": 1,
+      "y_pred": 0,
+      "model_probability_success": 0.2733333333333333
+    }
+  ],
+  "plot_seed": 42,
+  "global_plot_max_display": 20,
+  "local_plot_max_display": 15,
+  "deterministic_rerun": {
+    "compared_csv_and_png_outputs": 10,
+    "result": "PASS"
+  },
+  "protected_artifacts": {
+    "count": 19,
+    "unchanged": true,
+    "sha256": {
+      "artifacts/shap_pilot_v1/random_forest_baseline.joblib": "d3851aa948fb78d0c827849e864e82836f5988f5dadb9952743ec8ec46f55b36",
+      "data/processed/baseline_k10/X_test_tree.npz": "59f619ca36548b57cd0451e50b021020f9b1d09e3e96488b85f548e3f87e0a29",
+      "data/processed/baseline_k10/X_train_tree.npz": "36c87be9f38794fe837ae7112c1c627b3f60d731f08557480227ef75d5391c2d",
+      "data/processed/baseline_k10/y_test.npy": "b5c1dc653fe1b102d36502c9bb136263937934e96c1601af634645cc961e1f93",
+      "data/processed/baseline_k10/y_train.npy": "0f79ba4e202caffabd9f4324694570667a17a03b20264ec610ac483125964ec5",
+      "data/processed/shap_pilot_v1/base_values_success.npy": "b833d9c5629af02f4ee2fb52c3338e15722526204238cca59e1ddc06285200fb",
+      "data/processed/shap_pilot_v1/model_probabilities_success.npy": "8cd77ce1b77fbaed8a37d5ed63e328f0fb5e6ed9c11fac98db019d47729f0c6c",
+      "data/processed/shap_pilot_v1/shap_values_success.npy": "a01994419b95950b5c1b6446c841d82d0715669ac0ff17e4b6fad9bfdf79da03",
+      "results/baseline_v1/feature_names_tree.csv": "1a5ac656d7eeacb711041a711f32f54d93ebd18d3be46367c59b059961f3ce93",
+      "results/baseline_v1/test_case_ids.csv": "a16351af6ed5d7c297ba9f652f05079c66925c3591f5de11f93530129cd90125",
+      "results/baseline_v1/train_case_ids.csv": "eebf72befbbd3f5f2b9dc6f46f400224e487a3ad66379e250f68b741f6d5bff3",
+      "results/shap_pilot_v1/background_case_ids.csv": "48c9da113578ba0fd18dda62fb58fc7ccbc3e4202b1d901932cca934020b31d6",
+      "results/shap_pilot_v1/explained_case_ids.csv": "48586afd205f9c09e27121e97710f043e2310be905c7788820ee0b784be44b72",
+      "results/shap_pilot_v1/full_shap_case_metadata.csv": "4787f1696a0628514cf3c15da616f5da34c44312c86b0214f6a3abd54aee67e1",
+      "results/shap_pilot_v1/full_shap_manifest.json": "39beca2b5791df91a001b906acb44da3c0f4d5f797cb278c2df036e0ddac6b1b",
+      "results/shap_pilot_v1/model_freeze_manifest.json": "935b43b031b3703b3af6f2f73ec70eb5fc9ae04fc990566d526311a2ba2edd68",
+      "results/shap_pilot_v1/sample_manifest.json": "6b38178f6349be8d3fcd7be6919e8cc3f1cffe317d119e378ef765fa28dbc0da",
+      "results/shap_pilot_v1/shap_core_manifest.json": "8b8d7e6cfe50a02c25f2341a2b4684a8de726d27fe309c7e1d6b43d4fa3da839",
+      "results/shap_pilot_v1/shap_core_resolution.json": "9bd575b2491b4b8a20d0e143b3105cb9a4b0ca5a9f68e381730ccc75ab9de613"
+    }
+  },
+  "outputs_sha256": {
+    "results/shap_pilot_v1/global_shap_importance.csv": "b9e8538fd431694b49648962b0f17e6f9a27da8e135c96658689d5e90a5a10c4",
+    "results/shap_pilot_v1/global_shap_group_importance.csv": "741bb1da06998a938b130629069516065bb14eb53c73cef2002a30031b0845c1",
+    "results/shap_pilot_v1/local_examples.csv": "a84e9f03ef1c135a79b869146fcc30b7fb5f41decce5567aff510b7b86d5fd4d",
+    "results/shap_pilot_v1/local_feature_contributions.csv": "b6a5d2192822f99ad33a82b901cf1b0895a985892cac57ebd4d38f4f15bce0cc",
+    "results/shap_pilot_v1/shap_global_bar.png": "43382fa681103e750061bfc2afac2dcac2553e172026114992b3f7f0be04c3ed",
+    "results/shap_pilot_v1/shap_beeswarm.png": "b95f2c9c62decc8e257b15e003b9e6cabd7fce0053608aabe93f46bdefe9ab58",
+    "results/shap_pilot_v1/local_tp_waterfall.png": "e88409bf382fa8cde8600878cdabcc423a134aad536c63df4185a3b61e698193",
+    "results/shap_pilot_v1/local_tn_waterfall.png": "2bfef7250cc79931c6dd41205a7a7cbfb9f190ba2d9b2f0b260c71c85110cf31",
+    "results/shap_pilot_v1/local_fp_waterfall.png": "0d25d70d3b162e906f0766da91e6283bc59ffa45cce663f0f87d4b2d8df904cd",
+    "results/shap_pilot_v1/local_fn_waterfall.png": "68a6d5e6f826c4ee450b223e344acf663504dd781ff1d18d2b1150a84d7fcb52",
+    "results/shap_pilot_v1/shap_pilot_v1.md": "589caaa84dae2b87cf968779b438a0180eebd1a704f5b5b3675c0c332e0f3a14"
+  },
+  "assertions": {
+    "shap_matrix_shape_1000_by_165": "PASS",
+    "base_values_shape_1000": "PASS",
+    "model_probabilities_shape_1000": "PASS",
+    "metadata_rows_1000": "PASS",
+    "feature_names_count_165": "PASS",
+    "feature_names_unique": "PASS",
+    "part_3_canonical_hashes_match": "PASS",
+    "explained_feature_matrix_shape_1000_by_165": "PASS",
+    "explained_case_order_matches": "PASS",
+    "no_missing_case_ids": "PASS",
+    "no_duplicate_case_ids": "PASS",
+    "all_shap_values_finite": "PASS",
+    "all_features_map_to_exactly_one_group": "PASS",
+    "group_feature_counts_sum_to_165": "PASS",
+    "feature_importance_shares_sum_to_one": "PASS",
+    "group_importance_shares_sum_to_one": "PASS",
+    "tp_tn_fp_fn_examples_exist": "PASS",
+    "exactly_four_local_examples": "PASS",
+    "minimum_sample_order_selection": "PASS",
+    "rf_y_true_matches_explained_target": "PASS",
+    "part_3_probabilities_match_frozen_rf": "PASS",
+    "local_shap_rows_match_sample_order": "PASS",
+    "no_explainer_constructed": "PASS",
+    "no_shap_value_computation": "PASS",
+    "no_model_training": "PASS",
+    "no_preprocessing_fitting": "PASS",
+    "no_tuning": "PASS",
+    "no_resampling": "PASS",
+    "no_temporal_window_analysis": "PASS",
+    "no_explanation_stability_metrics": "PASS",
+    "protected_part_0_through_3_artifacts_unchanged": "PASS"
+  },
+  "assertion_status": "PASS"
+}
