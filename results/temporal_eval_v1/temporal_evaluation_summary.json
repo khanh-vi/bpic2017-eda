@@ -1,0 +1,229 @@
+{
+  "experiment": "temporal_evaluation_v1",
+  "stage": "completed",
+  "prediction_point": "k=10",
+  "model": "Frozen Random Forest Baseline V1 (untuned baseline)",
+  "test_cases": 6276,
+  "shap_cases": 1000,
+  "windows": {
+    "T1": {
+      "n_cases": 2092,
+      "start_case_start_time": "2016-10-18T11:25:16.948000+00:00",
+      "end_case_start_time": "2016-11-08T17:05:15.051000+00:00",
+      "shap_cases": 325
+    },
+    "T2": {
+      "n_cases": 2092,
+      "start_case_start_time": "2016-11-08T17:28:09.702000+00:00",
+      "end_case_start_time": "2016-12-02T18:50:47.710000+00:00",
+      "shap_cases": 332
+    },
+    "T3": {
+      "n_cases": 2092,
+      "start_case_start_time": "2016-12-02T19:21:29.337000+00:00",
+      "end_case_start_time": "2016-12-31T21:37:53.216000+00:00",
+      "shap_cases": 343
+    }
+  },
+  "prediction_summary": {
+    "T1": {
+      "n_cases": 2092,
+      "success_rate": 0.5554493307839388,
+      "mean_probability_success": 0.5577644996813257,
+      "roc_auc": 0.5777770066440879,
+      "average_precision": 0.6340666439855722,
+      "accuracy": 0.5554493307839388,
+      "precision": 0.5903426791277259,
+      "recall": 0.6523235800344234,
+      "f1": 0.6197874080130826
+    },
+    "T2": {
+      "n_cases": 2092,
+      "success_rate": 0.5525812619502868,
+      "mean_probability_success": 0.5518451242829828,
+      "roc_auc": 0.5776324009996154,
+      "average_precision": 0.621997913339752,
+      "accuracy": 0.5659655831739961,
+      "precision": 0.598256735340729,
+      "recall": 0.653114186851211,
+      "f1": 0.6244830438378826
+    },
+    "T3": {
+      "n_cases": 2092,
+      "success_rate": 0.5411089866156787,
+      "mean_probability_success": 0.5476306564690886,
+      "roc_auc": 0.6073022489693757,
+      "average_precision": 0.6355694329507383,
+      "accuracy": 0.5822179732313576,
+      "precision": 0.6043689320388349,
+      "recall": 0.6598939929328622,
+      "f1": 0.6309121621621622
+    }
+  },
+  "explanation_stability_summary": [
+    {
+      "comparison": "T1_to_T2",
+      "window_a": "T1",
+      "window_b": "T2",
+      "jaccard_at_10": 0.8181818181818182,
+      "spearman_rho": 0.9728520363023835,
+      "top10_intersection_count": 9,
+      "top10_union_count": 11
+    },
+    {
+      "comparison": "T2_to_T3",
+      "window_a": "T2",
+      "window_b": "T3",
+      "jaccard_at_10": 0.8181818181818182,
+      "spearman_rho": 0.973634969950382,
+      "top10_intersection_count": 9,
+      "top10_union_count": 11
+    },
+    {
+      "comparison": "T1_to_T3",
+      "window_a": "T1",
+      "window_b": "T3",
+      "jaccard_at_10": 1.0,
+      "spearman_rho": 0.9569591216051125,
+      "top10_intersection_count": 10,
+      "top10_union_count": 10
+    }
+  ],
+  "synthesis_summary": {
+    "delta_definition": "later window minus earlier window",
+    "comparisons": [
+      {
+        "comparison": "T1_to_T2",
+        "window_a": "T1",
+        "window_b": "T2",
+        "delta_success_rate": -0.002868068833651982,
+        "delta_mean_probability_success": -0.005919375398342863,
+        "delta_roc_auc": -0.00014460564447249524,
+        "delta_average_precision": -0.012068730645820258,
+        "delta_accuracy": 0.010516252390057379,
+        "delta_precision": 0.007914056213003118,
+        "delta_recall": 0.0007906068167876645,
+        "delta_f1": 0.004695635824799926,
+        "jaccard_at_10": 0.8181818181818182,
+        "spearman_rho": 0.9728520363023835,
+        "top10_intersection_count": 9,
+        "top10_union_count": 11
+      },
+      {
+        "comparison": "T2_to_T3",
+        "window_a": "T2",
+        "window_b": "T3",
+        "delta_success_rate": -0.01147227533460804,
+        "delta_mean_probability_success": -0.004214467813894229,
+        "delta_roc_auc": 0.029669847969760244,
+        "delta_average_precision": 0.013571519610986349,
+        "delta_accuracy": 0.016252390057361454,
+        "delta_precision": 0.006112196698105921,
+        "delta_recall": 0.006779806081651185,
+        "delta_f1": 0.006429118324279615,
+        "jaccard_at_10": 0.8181818181818182,
+        "spearman_rho": 0.973634969950382,
+        "top10_intersection_count": 9,
+        "top10_union_count": 11
+      },
+      {
+        "comparison": "T1_to_T3",
+        "window_a": "T1",
+        "window_b": "T3",
+        "delta_success_rate": -0.014340344168260022,
+        "delta_mean_probability_success": -0.010133843212237093,
+        "delta_roc_auc": 0.02952524232528775,
+        "delta_average_precision": 0.0015027889651660908,
+        "delta_accuracy": 0.026768642447418833,
+        "delta_precision": 0.014026252911109038,
+        "delta_recall": 0.00757041289843885,
+        "delta_f1": 0.011124754149079541,
+        "jaccard_at_10": 1.0,
+        "spearman_rho": 0.9569591216051125,
+        "top10_intersection_count": 10,
+        "top10_union_count": 10
+      }
+    ],
+    "all_window_top10_intersection": [
+      "requested_amount",
+      "mean_event_gap_seconds",
+      "prefix_duration_seconds",
+      "resource::User_1",
+      "activity::A_Submitted",
+      "activity::W_Handle leads",
+      "loan_goal_Home improvement",
+      "n_unique_resources",
+      "application_type_New credit"
+    ],
+    "all_window_top10_intersection_count": 9,
+    "temporal_top10_union_count": 11,
+    "t1_t3_top10_sets_identical": true,
+    "temporary_t2_signed_shap_changes": [
+      "loan_goal_Car",
+      "application_type_New credit",
+      "application_type_Limit raise"
+    ]
+  },
+  "main_findings": [
+    "Success prevalence decreased from T1 through T3.",
+    "Mean predicted Success probability decreased from T1 through T3.",
+    "ROC-AUC was nearly unchanged from T1 to T2 and was higher in T3.",
+    "Average Precision decreased in T2 and recovered in T3.",
+    "Adjacent windows shared 9 of their top 10 SHAP features.",
+    "T1 and T3 had identical top-10 SHAP feature sets.",
+    "Full 165-feature importance rankings remained strongly correlated across windows.",
+    "Resource attribution share decreased while Activity share increased.",
+    "Three union-top-10 features had a temporary mean signed SHAP direction change in T2.",
+    "Predictive changes were not accompanied by a comparably large reorganization of global SHAP importance."
+  ],
+  "limitations": [
+    "Random Forest is an untuned baseline.",
+    "Explanation analysis uses 1,000 sampled cases rather than all 6,276 test cases.",
+    "The windows cover only the frozen October--December 2016 test period.",
+    "Windows are equal-case rather than fixed-duration windows.",
+    "No statistical significance testing was performed.",
+    "No formal concept-drift detector was used.",
+    "SHAP explains model behavior, not causality.",
+    "Results may change after model tuning or final model selection."
+  ],
+  "model_retrained": false,
+  "preprocessing_refitted": false,
+  "shap_recomputed": false,
+  "temporal_boundaries_changed": false,
+  "shap_resampled": false,
+  "predictions_recomputed": false,
+  "significance_testing": false,
+  "formal_drift_detection": false,
+  "protected_artifact_integrity": {
+    "status": "PASS",
+    "file_count": 120,
+    "scope": "Part 1--3, Baseline V1, and SHAP Pilot V1 artifacts"
+  },
+  "assertions": {
+    "A_part_1_boundaries_unchanged": "PASS",
+    "B_part_2_metric_artifacts_unchanged": "PASS",
+    "C_part_3_shap_artifacts_unchanged": "PASS",
+    "D_synthesis_contains_exactly_3_comparisons": "PASS",
+    "E_comparison_order_is_frozen": "PASS",
+    "F_prediction_deltas_exactly_match_part_2": "PASS",
+    "G_jaccard_values_exactly_match_part_3": "PASS",
+    "H_spearman_values_exactly_match_part_3": "PASS",
+    "I_no_model_prediction_recomputation": "PASS",
+    "J_no_shap_recomputation": "PASS",
+    "K_no_model_fitting": "PASS",
+    "L_no_preprocessing_fitting": "PASS",
+    "M_no_shap_resampling": "PASS",
+    "N_no_temporal_boundary_modification": "PASS",
+    "O_no_formal_drift_detection": "PASS",
+    "P_no_significance_based_conclusion": "PASS",
+    "Q_report_states_shap_is_not_causal": "PASS",
+    "R_report_states_rf_is_untuned_baseline": "PASS",
+    "S_report_documents_6276_prediction_vs_1000_explanation_cases": "PASS",
+    "T_report_answers_temporal_prediction_explanation_question": "PASS"
+  },
+  "assertion_status": "PASS",
+  "generated_artifact_sha256_excluding_summary": {
+    "results/temporal_eval_v1/prediction_explanation_synthesis.csv": "f708e3206002048887e9d07d3fb425b6c8ff11636af98a3acae1ff321003c708",
+    "results/temporal_eval_v1/temporal_evaluation_v1.md": "63b435501106fb0448162a2c414be90d68128d96e0d923df1921306e57e752c0"
+  }
+}
