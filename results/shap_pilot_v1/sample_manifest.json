@@ -1,0 +1,188 @@
+{
+  "experiment": "shap_pilot_v1",
+  "stage": "part_1_sampling",
+  "prediction_point": 10,
+  "feature_count": 165,
+  "canonical_source_counts": {
+    "train": 25100,
+    "test": 6276
+  },
+  "full_source_target_distribution": {
+    "train": {
+      "success_count": 13778,
+      "unsuccessful_count": 11322,
+      "success_rate": 0.5489243027888446,
+      "unsuccessful_rate": 0.45107569721115537
+    },
+    "test": {
+      "success_count": 3450,
+      "unsuccessful_count": 2826,
+      "success_rate": 0.5497131931166348,
+      "unsuccessful_rate": 0.4502868068833652
+    }
+  },
+  "background_source": "train",
+  "background_sample_size": 500,
+  "background_sampling": "uniform_without_replacement",
+  "background_seed": 42,
+  "explained_source": "test",
+  "explained_sample_size": 1000,
+  "explained_sampling": "uniform_without_replacement",
+  "explained_seed": 42,
+  "rng": "numpy.random.default_rng",
+  "stratified": false,
+  "selection_inputs": [
+    "population_size",
+    "sample_size",
+    "seed"
+  ],
+  "selection_used_targets": false,
+  "selection_used_predictions": false,
+  "selection_used_features": false,
+  "background_target_distribution": {
+    "success_count": 290,
+    "unsuccessful_count": 210,
+    "success_rate": 0.58,
+    "unsuccessful_rate": 0.42
+  },
+  "explained_target_distribution": {
+    "success_count": 569,
+    "unsuccessful_count": 431,
+    "success_rate": 0.569,
+    "unsuccessful_rate": 0.431
+  },
+  "matrix_shapes": {
+    "background": [
+      500,
+      165
+    ],
+    "explained": [
+      1000,
+      165
+    ]
+  },
+  "matrix_subsets_saved": false,
+  "overlap_checks": {
+    "canonical_train_test_overlap": 0,
+    "background_test_overlap": 0,
+    "explained_train_overlap": 0,
+    "background_explained_overlap": 0
+  },
+  "background_test_overlap": 0,
+  "prediction_audit": {
+    "positive_class": 1,
+    "model_classes": [
+      0,
+      1
+    ],
+    "positive_probability_column_index": 1,
+    "confusion_counts": {
+      "tp": 365,
+      "tn": 201,
+      "fp": 230,
+      "fn": 204
+    },
+    "category_coverage": {
+      "tp": true,
+      "tn": true,
+      "fp": true,
+      "fn": true
+    },
+    "probability_summary": {
+      "minimum": 0.08,
+      "mean": 0.5493700000000001,
+      "maximum": 0.9566666666666667
+    }
+  },
+  "deterministic_rerun": {
+    "method": "two independent numpy.random.default_rng(42) initializations per source",
+    "background_indices_identical": true,
+    "explained_indices_identical": true,
+    "background_csv_bytes_identical": true,
+    "explained_csv_bytes_identical": true,
+    "background_matrix_rows_identical": true,
+    "explained_matrix_rows_identical": true,
+    "result": "PASS"
+  },
+  "model_retrained": false,
+  "preprocessing_refitted": false,
+  "feature_space_changed": false,
+  "shap_imported": false,
+  "shap_executed": false,
+  "protected_artifacts": {
+    "count": 35,
+    "unchanged": true,
+    "sha256": {
+      "artifacts/baseline_v1/preprocessing_components.joblib": "3da619e4c43b8482b8dca5bfb5abefe68a5183ddc0c96a24b83e0f59d54f3281",
+      "artifacts/shap_pilot_v1/random_forest_baseline.joblib": "d3851aa948fb78d0c827849e864e82836f5988f5dadb9952743ec8ec46f55b36",
+      "data/processed/baseline_k10/X_test_linear.npz": "fd2c428aba7e02adcaf7f614e8eabd096e245c82fc5bcfff22fe766e63064296",
+      "data/processed/baseline_k10/X_test_tree.npz": "59f619ca36548b57cd0451e50b021020f9b1d09e3e96488b85f548e3f87e0a29",
+      "data/processed/baseline_k10/X_train_linear.npz": "6c468af5aecd1d2bea0b4e2635a3cca709711a6451e048652d53690524d8a192",
+      "data/processed/baseline_k10/X_train_tree.npz": "36c87be9f38794fe837ae7112c1c627b3f60d731f08557480227ef75d5391c2d",
+      "data/processed/baseline_k10/case_features_k10.parquet": "2600f00f0c5f7ee6c1d129cc8e5b8081493944601a5d0e7a35692e0dbdc81668",
+      "data/processed/baseline_k10/y_test.npy": "b5c1dc653fe1b102d36502c9bb136263937934e96c1601af634645cc961e1f93",
+      "data/processed/baseline_k10/y_train.npy": "0f79ba4e202caffabd9f4324694570667a17a03b20264ec610ac483125964ec5",
+      "results/baseline_v1/baseline_metrics.csv": "1b44d8f8807b1e4fc9281b7f6704348b9b56105a97e2da3efdbb616cac180f0d",
+      "results/baseline_v1/baseline_metrics.json": "40855b6e3a43ab0742abda6c125fe86c77983df29a49501b9dd44a169bb535b7",
+      "results/baseline_v1/baseline_v1.md": "a667b1ad8ee2695dbd7774ae899e0c9891a971271c95d0d3e2c5a91941ccd554",
+      "results/baseline_v1/confusion_matrix_dummy.png": "71845269ec76b0aaf0849dafd9b42f36d4903b97f77561e7b82e914eededee36",
+      "results/baseline_v1/confusion_matrix_logistic.png": "57ac00b318dacdcbb0a5104304d1934c7b908676acdab41cfab66baa813ccd92",
+      "results/baseline_v1/confusion_matrix_random_forest.png": "3075a5531adbe1a3e8f8e5a7f3023e5d7a94a82d76eeb86158b46e46ae4d43cc",
+      "results/baseline_v1/dummy_metrics.json": "4eea90f2d4350ba7c8bcb267a3a67e82de7d244c7edef01e8961bbfc3c4f67a1",
+      "results/baseline_v1/dummy_predictions.csv": "3e4204d72866e5a88c52cc63ed65dfb9ff6065b42fcd2e331d6d9d7d9d24d157",
+      "results/baseline_v1/eligibility_summary.json": "674f9b389e5f4e05a6a96db355645d0cebdddc858a89efd2355ddaffc5cbce66",
+      "results/baseline_v1/eligible_cases_k10.csv": "ec2a6be8a7d7637f381b8424687e34145bff1962706ba024afb4a5c50ade09b9",
+      "results/baseline_v1/feature_manifest.json": "3be21eff91574b7affb7636e5f96c9766a504ddc89ab343ca0cbd25200384a16",
+      "results/baseline_v1/feature_names_linear.csv": "1a5ac656d7eeacb711041a711f32f54d93ebd18d3be46367c59b059961f3ce93",
+      "results/baseline_v1/feature_names_tree.csv": "1a5ac656d7eeacb711041a711f32f54d93ebd18d3be46367c59b059961f3ce93",
+      "results/baseline_v1/logistic_coefficients.csv": "8e9b3d6f032529c14be0d071bd037e364d9dfa622e7faf8bede058361f670dc6",
+      "results/baseline_v1/logistic_metrics.json": "eb3b12e0484c4ea910254263e95d534f75b81d09e19dcbd6db4c6f580f7a01c4",
+      "results/baseline_v1/logistic_predictions.csv": "46ecf2f29cbb3ac1e19a5a8c8e6715886d53a4990560140f6f8edc22fd0485a8",
+      "results/baseline_v1/pr_curve.png": "fb822b70b8637b64aa0510190cb7524a56950bc566ddbe6375f5682ffaf4fcb8",
+      "results/baseline_v1/preprocessing_manifest.json": "e7c0cdcfae7d1d8d32d340371d31209fad0c8c4d33269822f07bea6257cf702f",
+      "results/baseline_v1/random_forest_feature_importances.csv": "8431b6ee42848360086b2b2596d4424048769124daf6d4174780f7177c941c06",
+      "results/baseline_v1/random_forest_metrics.json": "f050c623e0bb2a7c25a570c252db930610322a05ba678d9383bc2d15a2e8a743",
+      "results/baseline_v1/random_forest_predictions.csv": "425c12180e62617c716bbd0f9cadf3fb249c1c244c90fa9157cdf9e111d6d837",
+      "results/baseline_v1/roc_curve.png": "92b8954fb0a8b88fe105276d5309e9babcdc3b65f82c51f838820b88057798dc",
+      "results/baseline_v1/split_summary.json": "79e4e1cf28ceae8d412cbf5723a81b6a6e87a926545574e67642affa05c853c1",
+      "results/baseline_v1/test_case_ids.csv": "a16351af6ed5d7c297ba9f652f05079c66925c3591f5de11f93530129cd90125",
+      "results/baseline_v1/train_case_ids.csv": "eebf72befbbd3f5f2b9dc6f46f400224e487a3ad66379e250f68b741f6d5bff3",
+      "results/shap_pilot_v1/model_freeze_manifest.json": "935b43b031b3703b3af6f2f73ec70eb5fc9ae04fc990566d526311a2ba2edd68"
+    }
+  },
+  "outputs": {
+    "background_case_ids": "results/shap_pilot_v1/background_case_ids.csv",
+    "explained_case_ids": "results/shap_pilot_v1/explained_case_ids.csv",
+    "sample_manifest": "results/shap_pilot_v1/sample_manifest.json"
+  },
+  "assertions": {
+    "A_every_background_case_belongs_to_train": "PASS",
+    "B_no_background_case_belongs_to_test": "PASS",
+    "C_every_explained_case_belongs_to_test": "PASS",
+    "D_no_explained_case_belongs_to_train": "PASS",
+    "E_background_ids_unique": "PASS",
+    "F_explained_ids_unique": "PASS",
+    "G_background_explained_overlap_zero": "PASS",
+    "H_background_sample_size_500": "PASS",
+    "I_explained_sample_size_1000": "PASS",
+    "J_source_row_indices_valid": "PASS",
+    "K_case_ids_match_canonical_source_rows": "PASS",
+    "L_targets_match_canonical_source_rows": "PASS",
+    "M_sampling_did_not_use_targets": "PASS",
+    "N_sampling_did_not_use_predictions": "PASS",
+    "O_sampling_did_not_use_feature_values": "PASS",
+    "P_no_preprocessing_fitting": "PASS",
+    "Q_no_model_fitting": "PASS",
+    "R_no_shap_import_or_execution": "PASS",
+    "feature_name_count_165": "PASS",
+    "feature_names_unique": "PASS",
+    "background_shape_500_by_165": "PASS",
+    "explained_shape_1000_by_165": "PASS",
+    "sample_matrices_finite": "PASS",
+    "feature_columns_unchanged": "PASS",
+    "sample_dimensions_match_frozen_model": "PASS",
+    "protected_artifacts_unchanged": "PASS",
+    "deterministic_rerun": "PASS"
+  },
+  "assertion_status": "PASS"
+}
