@@ -1,0 +1,193 @@
+{
+  "experiment": "shap_pilot_v1",
+  "stage": "part_3_full_tree_shap_computation",
+  "environment": {
+    "python_version": "3.13.7",
+    "shap_version": "0.52.0",
+    "scikit_learn_version": "1.9.1",
+    "numpy_version": "2.5.3",
+    "scipy_version": "1.18.1",
+    "pandas_version": "3.0.5"
+  },
+  "shap_version": "0.52.0",
+  "prediction_point": 10,
+  "model": "RandomForestClassifier",
+  "model_path": "artifacts/shap_pilot_v1/random_forest_baseline.joblib",
+  "positive_class": 1,
+  "positive_class_index": 1,
+  "feature_count": 165,
+  "background_cases": 500,
+  "explained_cases": 1000,
+  "background_shape": [
+    500,
+    165
+  ],
+  "explained_shape": [
+    1000,
+    165
+  ],
+  "batch_size": 50,
+  "batch_count": 20,
+  "completed_batches": 20,
+  "computed_batches_this_invocation": [],
+  "resumed_skipped_batches_this_invocation": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "feature_perturbation": "interventional",
+  "model_output": "probability",
+  "approximate": false,
+  "additivity_tolerance": 1e-05,
+  "full_shap_shape": [
+    1000,
+    165
+  ],
+  "base_values_shape": [
+    1000
+  ],
+  "model_probabilities_shape": [
+    1000
+  ],
+  "metadata_rows": 1000,
+  "maximum_additivity_error": 6.688518621997264e-06,
+  "mean_additivity_error": 6.667661278674214e-06,
+  "median_additivity_error": 6.667244388747218e-06,
+  "minimum_additivity_error": 6.651910925858928e-06,
+  "additivity_error_threshold_counts": {
+    "above_1e_6": 1000,
+    "above_5e_6": 1000,
+    "above_1e_5": 0
+  },
+  "shap_numerical_summary": {
+    "minimum": -0.1480780494126553,
+    "maximum": 0.10645256413068857,
+    "overall_mean_absolute_value": 0.0016894867275536935,
+    "nan_count": 0,
+    "positive_infinity_count": 0,
+    "negative_infinity_count": 0,
+    "all_finite": true
+  },
+  "numerical_finiteness_result": "PASS",
+  "runtime_summary": {
+    "total_shap_computation_seconds": 4859.263885400018,
+    "average_seconds_per_case": 4.859263885400018,
+    "fastest_batch": {
+      "batch_number": 15,
+      "batch_size": 50,
+      "start_time": "2026-09-17T15:08:35.179416+00:00",
+      "elapsed_seconds": 226.11912329999905,
+      "seconds_per_case": 4.522382465999981
+    },
+    "slowest_batch": {
+      "batch_number": 1,
+      "batch_size": 50,
+      "start_time": "2026-09-17T13:23:35.679275+00:00",
+      "elapsed_seconds": 254.92510780000157,
+      "seconds_per_case": 5.098502156000031
+    },
+    "scientific_runtime_source": "successful validated checkpoint batches only"
+  },
+  "resume_support_enabled": true,
+  "resume_validation_result": "PASS",
+  "model_retrained": false,
+  "preprocessing_refitted": false,
+  "background_changed": false,
+  "explained_sample_changed": false,
+  "resampled": false,
+  "global_ranking_created": false,
+  "feature_group_ranking_created": false,
+  "plot_created": false,
+  "temporal_analysis_performed": false,
+  "stability_calculated": false,
+  "canonical_artifact_hashes": {
+    "shap_values_success_npy_sha256": "a01994419b95950b5c1b6446c841d82d0715669ac0ff17e4b6fad9bfdf79da03",
+    "base_values_success_npy_sha256": "b833d9c5629af02f4ee2fb52c3338e15722526204238cca59e1ddc06285200fb",
+    "model_probabilities_success_npy_sha256": "8cd77ce1b77fbaed8a37d5ed63e328f0fb5e6ed9c11fac98db019d47729f0c6c",
+    "full_shap_case_metadata_csv_sha256": "4787f1696a0628514cf3c15da616f5da34c44312c86b0214f6a3abd54aee67e1",
+    "shap_values_success_array_sha256": "2af1143bbb2faf36a2c2500423cc0285edfd52f1fb1ef9242d02bc7850a542f9",
+    "base_values_success_array_sha256": "4c605b82c905d656cfbcd337a2471f4bcbe79a750866bda41ce11865a7b9f0ea",
+    "model_probabilities_success_array_sha256": "f1c05196c98432051356fee6ff28c67327dfbf2086cdc60e5711d0830b0dfefe"
+  },
+  "protected_artifacts": {
+    "count": 14,
+    "unchanged": true,
+    "input_fingerprint_sha256": "adec2c6f63f2ca0cf15f66f6d2aed63378f03fb2f7e4f314e506bd792ac80178",
+    "sha256": {
+      "artifacts/shap_pilot_v1/random_forest_baseline.joblib": "d3851aa948fb78d0c827849e864e82836f5988f5dadb9952743ec8ec46f55b36",
+      "data/processed/baseline_k10/X_test_tree.npz": "59f619ca36548b57cd0451e50b021020f9b1d09e3e96488b85f548e3f87e0a29",
+      "data/processed/baseline_k10/X_train_tree.npz": "36c87be9f38794fe837ae7112c1c627b3f60d731f08557480227ef75d5391c2d",
+      "data/processed/baseline_k10/y_test.npy": "b5c1dc653fe1b102d36502c9bb136263937934e96c1601af634645cc961e1f93",
+      "data/processed/baseline_k10/y_train.npy": "0f79ba4e202caffabd9f4324694570667a17a03b20264ec610ac483125964ec5",
+      "results/baseline_v1/feature_names_tree.csv": "1a5ac656d7eeacb711041a711f32f54d93ebd18d3be46367c59b059961f3ce93",
+      "results/baseline_v1/test_case_ids.csv": "a16351af6ed5d7c297ba9f652f05079c66925c3591f5de11f93530129cd90125",
+      "results/baseline_v1/train_case_ids.csv": "eebf72befbbd3f5f2b9dc6f46f400224e487a3ad66379e250f68b741f6d5bff3",
+      "results/shap_pilot_v1/background_case_ids.csv": "48c9da113578ba0fd18dda62fb58fc7ccbc3e4202b1d901932cca934020b31d6",
+      "results/shap_pilot_v1/explained_case_ids.csv": "48586afd205f9c09e27121e97710f043e2310be905c7788820ee0b784be44b72",
+      "results/shap_pilot_v1/model_freeze_manifest.json": "935b43b031b3703b3af6f2f73ec70eb5fc9ae04fc990566d526311a2ba2edd68",
+      "results/shap_pilot_v1/sample_manifest.json": "6b38178f6349be8d3fcd7be6919e8cc3f1cffe317d119e378ef765fa28dbc0da",
+      "results/shap_pilot_v1/shap_core_manifest.json": "8b8d7e6cfe50a02c25f2341a2b4684a8de726d27fe309c7e1d6b43d4fa3da839",
+      "results/shap_pilot_v1/shap_core_resolution.json": "9bd575b2491b4b8a20d0e143b3105cb9a4b0ca5a9f68e381730ccc75ab9de613"
+    }
+  },
+  "outputs": {
+    "shap_values_success": "data/processed/shap_pilot_v1/shap_values_success.npy",
+    "base_values_success": "data/processed/shap_pilot_v1/base_values_success.npy",
+    "model_probabilities_success": "data/processed/shap_pilot_v1/model_probabilities_success.npy",
+    "full_case_metadata": "results/shap_pilot_v1/full_shap_case_metadata.csv",
+    "batch_runtime": "results/shap_pilot_v1/shap_batch_runtime.csv",
+    "full_manifest": "results/shap_pilot_v1/full_shap_manifest.json",
+    "checkpoint_directory": "data/processed/shap_pilot_v1/batches"
+  },
+  "assertions": {
+    "model_artifact_unchanged": "PASS",
+    "background_ids_unchanged": "PASS",
+    "explained_ids_unchanged": "PASS",
+    "part_0_through_2b_artifacts_unchanged": "PASS",
+    "background_shape_500_by_165": "PASS",
+    "explained_shape_1000_by_165": "PASS",
+    "dense_conversion_preserves_all_values": "PASS",
+    "model_feature_count_165": "PASS",
+    "positive_class_is_1": "PASS",
+    "shap_version_0_52_0": "PASS",
+    "tree_explainer_configuration_matches_part_2": "PASS",
+    "approximate_false": "PASS",
+    "batch_size_50": "PASS",
+    "batch_count_20": "PASS",
+    "every_batch_follows_frozen_sample_order": "PASS",
+    "every_batch_has_correct_case_ids": "PASS",
+    "all_shap_values_finite": "PASS",
+    "every_case_additivity_error_at_most_1e_5": "PASS",
+    "full_matrix_shape_1000_by_165": "PASS",
+    "full_metadata_rows_1000": "PASS",
+    "no_missing_samples": "PASS",
+    "no_duplicate_samples": "PASS",
+    "feature_order_unchanged": "PASS",
+    "no_model_fitting": "PASS",
+    "no_preprocessing_fitting": "PASS",
+    "no_resampling": "PASS",
+    "no_global_ranking_created": "PASS",
+    "no_feature_group_ranking_created": "PASS",
+    "no_shap_plot_created": "PASS",
+    "no_temporal_analysis": "PASS",
+    "no_explanation_stability_calculation": "PASS"
+  },
+  "assertion_status": "PASS"
+}

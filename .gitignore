@@ -20,6 +20,12 @@ data/processed/baseline_k10/y_*.npy
 artifacts/baseline_v1/*.joblib
 artifacts/shap_pilot_v1/*.joblib
 
+# SHAP Pilot V1 generated numeric outputs and resumable checkpoints
+data/processed/shap_pilot_v1/batches/
+data/processed/shap_pilot_v1/shap_values_success.npy
+data/processed/shap_pilot_v1/base_values_success.npy
+data/processed/shap_pilot_v1/model_probabilities_success.npy
+
 # OS
 .DS_Store
 Thumbs.db
