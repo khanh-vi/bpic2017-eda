@@ -1,0 +1,209 @@
+{
+  "experiment": "shap_pilot_v1",
+  "stage": "part_2_tree_shap_core_validation",
+  "environment": {
+    "python_version": "3.13.7",
+    "shap_version": "0.52.0",
+    "scikit_learn_version": "1.9.1",
+    "numpy_version": "2.5.3",
+    "scipy_version": "1.18.1"
+  },
+  "shap_version": "0.52.0",
+  "model": "RandomForestClassifier",
+  "model_path": "artifacts/shap_pilot_v1/random_forest_baseline.joblib",
+  "model_classes": [
+    0,
+    1
+  ],
+  "positive_class": 1,
+  "positive_class_index": 1,
+  "feature_count": 165,
+  "background_cases": 500,
+  "explained_cases_frozen": 1000,
+  "smoke_cases": 32,
+  "matrix_shapes": {
+    "background": [
+      500,
+      165
+    ],
+    "frozen_explained_representation": [
+      1000,
+      165
+    ],
+    "smoke": [
+      32,
+      165
+    ]
+  },
+  "tree_explainer": {
+    "feature_perturbation": "interventional",
+    "model_output": "probability",
+    "approximate": false,
+    "background_representation": "shap.maskers.Independent",
+    "background_max_samples": 500,
+    "effective_background_cases": 500,
+    "background_rows_preserved_exactly": true
+  },
+  "feature_perturbation": "interventional",
+  "model_output": "probability",
+  "approximate": false,
+  "raw_shap_output_type": "shap._explanation.Explanation",
+  "raw_shap_output_shape": [
+    32,
+    165,
+    2
+  ],
+  "raw_base_value_shape": [
+    32,
+    2
+  ],
+  "explainer_expected_value_shape": [
+    2
+  ],
+  "output_names": [
+    "Output 0",
+    "Output 1"
+  ],
+  "feature_name_alignment": true,
+  "class_mapping": {
+    "output_axis": 2,
+    "class_axis_order": [
+      0,
+      1
+    ],
+    "model_class_order_used": true,
+    "base_value_representation": "per_case_per_class",
+    "raw_base_value_shape": [
+      32,
+      2
+    ],
+    "positive_base_value_shape": [
+      32
+    ]
+  },
+  "positive_shap_shape": [
+    32,
+    165
+  ],
+  "base_value_representation": "per_case_per_class",
+  "base_value_shape": [
+    32
+  ],
+  "probability_summary": {
+    "minimum": 0.18333333333333332,
+    "mean": 0.5536458333333333,
+    "maximum": 0.8633333333333333
+  },
+  "maximum_additivity_error": 6.683787133338059e-06,
+  "mean_additivity_error": 6.667166151420011e-06,
+  "median_additivity_error": 6.665245608050707e-06,
+  "additivity_tolerance": 1e-06,
+  "additivity_result": "FAIL",
+  "diagnostics": {
+    "class_mapping_validated": true,
+    "base_value_mapping_validated": true,
+    "model_output_probability_validated": true,
+    "input_order_validated": true,
+    "feature_order_validated": true,
+    "shap_internal_model_vs_frozen_predict_proba_maximum_difference": 2.4424906541753444e-15,
+    "likely_failure_source": "TreeSHAP numerical accumulation with the full 500-row background"
+  },
+  "class_zero_check": {
+    "performed": true,
+    "class_index": 0,
+    "maximum_additivity_error": 6.679623289373993e-06,
+    "mean_additivity_error": 6.667397091030328e-06,
+    "probability_sum_maximum_error": 0.0,
+    "probability_sum_result": "PASS",
+    "result": "FAIL"
+  },
+  "shap_numerical_audit": {
+    "shape": [
+      32,
+      165
+    ],
+    "minimum": -0.07478408200498615,
+    "maximum": 0.09082354666165728,
+    "mean_absolute_value": 0.0016705270372634662,
+    "nan_count": 0,
+    "positive_infinity_count": 0,
+    "negative_infinity_count": 0,
+    "all_finite": true
+  },
+  "shap_finiteness_result": "PASS",
+  "runtime": {
+    "tree_explainer_construction_seconds": 0.777629700001853,
+    "smoke_shap_computation_seconds": 146.4434414999996,
+    "approximate_seconds_per_explained_case": 4.576357546874988,
+    "projected_1000_case_seconds": 4576.357546874988,
+    "projection_method": "linear extrapolation from the 32-case smoke run"
+  },
+  "determinism_fingerprint": {
+    "positive_shap_sha256": "c700994b943c23fcc9ef2441a3d45561ff3870f17b43de3effd384b323533913",
+    "positive_base_values_sha256": "d0bc9d6d262c48e49c189656666dc7f39eb1c3b7652c6dd0b5090f76ebff87e8",
+    "reconstructed_probabilities_sha256": "21f83f231d41b4ebe8fa3e11b7e8bf8e3cd71a3b86a2a6224179a2744c2efa7b"
+  },
+  "model_retrained": false,
+  "preprocessing_refitted": false,
+  "model_tuned": false,
+  "resampled": false,
+  "shap_ranking_created": false,
+  "shap_plot_created": false,
+  "full_shap_matrix_saved": false,
+  "protected_artifacts": {
+    "count": 12,
+    "unchanged": true,
+    "sha256": {
+      "artifacts/shap_pilot_v1/random_forest_baseline.joblib": "d3851aa948fb78d0c827849e864e82836f5988f5dadb9952743ec8ec46f55b36",
+      "results/shap_pilot_v1/model_freeze_manifest.json": "935b43b031b3703b3af6f2f73ec70eb5fc9ae04fc990566d526311a2ba2edd68",
+      "results/shap_pilot_v1/background_case_ids.csv": "48c9da113578ba0fd18dda62fb58fc7ccbc3e4202b1d901932cca934020b31d6",
+      "results/shap_pilot_v1/explained_case_ids.csv": "48586afd205f9c09e27121e97710f043e2310be905c7788820ee0b784be44b72",
+      "results/shap_pilot_v1/sample_manifest.json": "6b38178f6349be8d3fcd7be6919e8cc3f1cffe317d119e378ef765fa28dbc0da",
+      "results/baseline_v1/feature_names_tree.csv": "1a5ac656d7eeacb711041a711f32f54d93ebd18d3be46367c59b059961f3ce93",
+      "results/baseline_v1/train_case_ids.csv": "eebf72befbbd3f5f2b9dc6f46f400224e487a3ad66379e250f68b741f6d5bff3",
+      "results/baseline_v1/test_case_ids.csv": "a16351af6ed5d7c297ba9f652f05079c66925c3591f5de11f93530129cd90125",
+      "data/processed/baseline_k10/X_train_tree.npz": "36c87be9f38794fe837ae7112c1c627b3f60d731f08557480227ef75d5391c2d",
+      "data/processed/baseline_k10/X_test_tree.npz": "59f619ca36548b57cd0451e50b021020f9b1d09e3e96488b85f548e3f87e0a29",
+      "data/processed/baseline_k10/y_train.npy": "0f79ba4e202caffabd9f4324694570667a17a03b20264ec610ac483125964ec5",
+      "data/processed/baseline_k10/y_test.npy": "b5c1dc653fe1b102d36502c9bb136263937934e96c1601af634645cc961e1f93"
+    }
+  },
+  "outputs": {
+    "smoke_case_ids": "results/shap_pilot_v1/shap_smoke_case_ids.csv",
+    "additivity_check": "results/shap_pilot_v1/shap_additivity_check.csv",
+    "manifest": "results/shap_pilot_v1/shap_core_manifest.json"
+  },
+  "assertions": {
+    "frozen_model_unchanged": "PASS",
+    "background_ids_unchanged": "PASS",
+    "explained_ids_unchanged": "PASS",
+    "background_shape_500_by_165": "PASS",
+    "explained_representation_1000_by_165": "PASS",
+    "smoke_shape_32_by_165": "PASS",
+    "dense_conversion_preserves_values": "PASS",
+    "model_feature_count_165": "PASS",
+    "model_classes_0_1": "PASS",
+    "positive_class_explicitly_resolves_to_1": "PASS",
+    "shap_version_pinned": "PASS",
+    "feature_perturbation_interventional": "PASS",
+    "model_output_probability": "PASS",
+    "shap_feature_dimension_165": "PASS",
+    "positive_shap_shape_32_by_165": "PASS",
+    "all_shap_values_finite": "PASS",
+    "base_values_finite": "PASS",
+    "feature_order_matches_canonical_file": "PASS",
+    "A_Pending_absent": "PASS",
+    "A_Cancelled_absent": "PASS",
+    "A_Denied_absent": "PASS",
+    "manual_additivity_within_1e_6": "FAIL",
+    "no_preprocessing_fit": "PASS",
+    "no_model_training": "PASS",
+    "no_tuning": "PASS",
+    "no_resampling": "PASS",
+    "all_500_background_rows_used": "PASS",
+    "no_shap_ranking_created": "PASS",
+    "no_shap_plot_created": "PASS",
+    "no_full_shap_matrix_saved": "PASS"
+  },
+  "assertion_status": "FAIL"
+}
