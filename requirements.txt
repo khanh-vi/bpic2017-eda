@@ -1,1 +1,4 @@
 pm4py==2.7.23.8
+pyarrow==25.0.1
+scikit-learn==1.9.1
+shap==0.52.0

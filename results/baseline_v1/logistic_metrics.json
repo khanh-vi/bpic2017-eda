@@ -1,0 +1,144 @@
+{
+  "baseline_version": "v1_part6",
+  "model": "LogisticRegression",
+  "parameters": {
+    "penalty": "l2",
+    "C": 1.0,
+    "solver": "lbfgs",
+    "max_iter": 2000,
+    "class_weight": null,
+    "random_state": 42
+  },
+  "sklearn_api_adaptation": {
+    "applied": true,
+    "installed_sklearn_version": "1.9.1",
+    "reason": "scikit-learn 1.9.1 deprecates explicit penalty='l2' and emits a FutureWarning",
+    "effective_constructor_parameters": {
+      "C": 1.0,
+      "l1_ratio": 0.0,
+      "solver": "lbfgs",
+      "max_iter": 2000,
+      "class_weight": null,
+      "random_state": 42
+    },
+    "preserved_semantics": "L2 regularization with C=1.0"
+  },
+  "fit_scope": "train_only",
+  "reported_evaluation_split": "test",
+  "positive_class": 1,
+  "positive_class_name": "Success",
+  "classifier_classes": [
+    0,
+    1
+  ],
+  "positive_probability_column_index": 1,
+  "train_cases": 25100,
+  "test_cases": 6276,
+  "feature_count": 165,
+  "train_target_counts": {
+    "0": 11322,
+    "1": 13778
+  },
+  "test_target_counts": {
+    "0": 2826,
+    "1": 3450
+  },
+  "convergence_iterations": 300,
+  "max_iter": 2000,
+  "converged_before_max_iter": true,
+  "roc_auc": 0.6002674954101151,
+  "average_precision": 0.6425684064989117,
+  "average_precision_label": "PR-AUC (Average Precision)",
+  "accuracy": 0.5811026131293817,
+  "precision": 0.5966564633859195,
+  "recall": 0.7344927536231884,
+  "f1": 0.658438352604911,
+  "confusion_matrix": {
+    "labels": [
+      0,
+      1
+    ],
+    "rows": "true labels",
+    "columns": "predicted labels",
+    "values": [
+      [
+        1113,
+        1713
+      ],
+      [
+        916,
+        2534
+      ]
+    ]
+  },
+  "classification_decision_rule": "LogisticRegression.predict standard decision; no test-derived threshold adjustment",
+  "threshold_optimization": false,
+  "hyperparameter_tuning": false,
+  "cross_validation": false,
+  "class_weight": null,
+  "dummy_metric_deltas": {
+    "definition": "Logistic Regression minus DummyClassifier",
+    "roc_auc": 0.10026749541011515,
+    "average_precision": 0.09285521338227687,
+    "f1": -0.05100026553204151
+  },
+  "coefficient_audit": {
+    "coefficient_count": 165,
+    "minimum": -0.8061644744186892,
+    "maximum": 0.5684677667116588,
+    "intercept": 0.004859003990750322,
+    "positive_count": 69,
+    "negative_count": 96,
+    "zero_count_within_tolerance": 0,
+    "zero_tolerance": 1e-12,
+    "causal_interpretation_performed": false,
+    "feature_selection_performed": false
+  },
+  "reproducibility": {
+    "method": "two independent fits with the fixed train-only configuration",
+    "second_fit_iterations": 300,
+    "classes_exact": true,
+    "positive_probability_column_exact": true,
+    "iterations_exact": true,
+    "coefficients_exact": true,
+    "intercept_exact": true,
+    "predictions_exact": true,
+    "probabilities_exact": true,
+    "result": "PASS"
+  },
+  "input_artifacts": {
+    "data/processed/baseline_k10/X_train_linear.npz": "6c468af5aecd1d2bea0b4e2635a3cca709711a6451e048652d53690524d8a192",
+    "data/processed/baseline_k10/X_test_linear.npz": "fd2c428aba7e02adcaf7f614e8eabd096e245c82fc5bcfff22fe766e63064296",
+    "data/processed/baseline_k10/y_train.npy": "0f79ba4e202caffabd9f4324694570667a17a03b20264ec610ac483125964ec5",
+    "data/processed/baseline_k10/y_test.npy": "b5c1dc653fe1b102d36502c9bb136263937934e96c1601af634645cc961e1f93",
+    "results/baseline_v1/test_case_ids.csv": "a16351af6ed5d7c297ba9f652f05079c66925c3591f5de11f93530129cd90125",
+    "results/baseline_v1/feature_names_linear.csv": "1a5ac656d7eeacb711041a711f32f54d93ebd18d3be46367c59b059961f3ce93",
+    "results/baseline_v1/preprocessing_manifest.json": "e7c0cdcfae7d1d8d32d340371d31209fad0c8c4d33269822f07bea6257cf702f",
+    "results/baseline_v1/split_summary.json": "79e4e1cf28ceae8d412cbf5723a81b6a6e87a926545574e67642affa05c853c1",
+    "results/baseline_v1/dummy_metrics.json": "4eea90f2d4350ba7c8bcb267a3a67e82de7d244c7edef01e8961bbfc3c4f67a1"
+  },
+  "assertions": {
+    "A_X_train_rows_25100": "PASS",
+    "B_X_test_rows_6276": "PASS",
+    "C_both_matrices_have_165_features": "PASS",
+    "D_y_train_length_25100": "PASS",
+    "E_y_test_length_6276": "PASS",
+    "F_train_target_distribution": "PASS",
+    "G_test_target_distribution": "PASS",
+    "H_prediction_length_6276": "PASS",
+    "I_probability_length_6276": "PASS",
+    "J_probabilities_finite": "PASS",
+    "K_probabilities_in_unit_interval": "PASS",
+    "L_predicted_labels_binary": "PASS",
+    "M_positive_probability_is_class_1": "PASS",
+    "N_prediction_order_matches_test_case_ids": "PASS",
+    "O_preprocessing_artifacts_unmodified": "PASS",
+    "P_fit_used_train_data_only": "PASS",
+    "Q_no_threshold_optimization": "PASS",
+    "R_class_weight_is_none": "PASS",
+    "S_no_hyperparameter_search_or_cv": "PASS",
+    "T_converged_before_max_iter": "PASS",
+    "U_feature_count_matches_matrix_columns": "PASS",
+    "V_feature_names_unique": "PASS"
+  }
+}

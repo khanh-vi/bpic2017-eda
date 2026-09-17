@@ -1,0 +1,214 @@
+{
+  "baseline_version": "v1_part7",
+  "model": "RandomForestClassifier",
+  "parameters": {
+    "n_estimators": 300,
+    "criterion": "gini",
+    "max_depth": null,
+    "min_samples_split": 2,
+    "min_samples_leaf": 1,
+    "max_features": "sqrt",
+    "bootstrap": true,
+    "class_weight": null,
+    "random_state": 42,
+    "n_jobs": -1
+  },
+  "sklearn_api_adaptation": {
+    "applied": false,
+    "installed_sklearn_version": "1.9.1",
+    "effective_constructor_parameters": {
+      "n_estimators": 300,
+      "criterion": "gini",
+      "max_depth": null,
+      "min_samples_split": 2,
+      "min_samples_leaf": 1,
+      "max_features": "sqrt",
+      "bootstrap": true,
+      "class_weight": null,
+      "random_state": 42,
+      "n_jobs": -1
+    }
+  },
+  "fit_scope": "train_only",
+  "reported_evaluation_split": "test",
+  "input_representation": "unscaled TREE",
+  "positive_class": 1,
+  "positive_class_name": "Success",
+  "classifier_classes": [
+    0,
+    1
+  ],
+  "positive_probability_column_index": 1,
+  "train_cases": 25100,
+  "test_cases": 6276,
+  "feature_count": 165,
+  "train_target_counts": {
+    "0": 11322,
+    "1": 13778
+  },
+  "test_target_counts": {
+    "0": 2826,
+    "1": 3450
+  },
+  "n_estimators": 300,
+  "tree_depth_summary": {
+    "minimum": 79,
+    "mean": 99.52,
+    "maximum": 136
+  },
+  "leaf_count_summary": {
+    "minimum": 9024,
+    "mean": 9373.73,
+    "maximum": 9610
+  },
+  "roc_auc": 0.5875780793255176,
+  "average_precision": 0.6301435500864094,
+  "average_precision_label": "PR-AUC (Average Precision)",
+  "accuracy": 0.5678776290630975,
+  "precision": 0.597567424643046,
+  "recall": 0.6550724637681159,
+  "f1": 0.625,
+  "confusion_matrix": {
+    "labels": [
+      0,
+      1
+    ],
+    "rows": "true labels",
+    "columns": "predicted labels",
+    "values": [
+      [
+        1304,
+        1522
+      ],
+      [
+        1190,
+        2260
+      ]
+    ]
+  },
+  "classification_decision_rule": "RandomForestClassifier.predict standard decision; no test-derived threshold adjustment",
+  "threshold_optimization": false,
+  "hyperparameter_tuning": false,
+  "cross_validation": false,
+  "class_weight": null,
+  "deltas_vs_dummy": {
+    "definition": "Random Forest minus DummyClassifier",
+    "roc_auc": 0.08757807932551764,
+    "average_precision": 0.08043035696977463,
+    "f1": -0.08443861813695253
+  },
+  "deltas_vs_logistic": {
+    "definition": "Random Forest minus Logistic Regression",
+    "roc_auc": -0.012689416084597505,
+    "average_precision": -0.012424856412502239,
+    "f1": -0.033438352604911015
+  },
+  "feature_importance_audit": {
+    "importance_count": 165,
+    "all_finite": true,
+    "all_non_negative": true,
+    "sum": 1.0,
+    "sum_approximately_one": true,
+    "minimum": 0.0,
+    "maximum": 0.16859836984966298,
+    "zero_importance_feature_count": 1,
+    "top_10_impurity_importances": [
+      {
+        "feature": "mean_event_gap_seconds",
+        "importance": 0.16859836984966298
+      },
+      {
+        "feature": "prefix_duration_seconds",
+        "importance": 0.16854485754508206
+      },
+      {
+        "feature": "requested_amount",
+        "importance": 0.11072810843898027
+      },
+      {
+        "feature": "loan_goal_Car",
+        "importance": 0.013648509214441686
+      },
+      {
+        "feature": "loan_goal_Home improvement",
+        "importance": 0.012869592841321333
+      },
+      {
+        "feature": "resource::User_49",
+        "importance": 0.011857095723676271
+      },
+      {
+        "feature": "loan_goal_Existing loan takeover",
+        "importance": 0.011722036560683168
+      },
+      {
+        "feature": "resource::User_3",
+        "importance": 0.009707949174562028
+      },
+      {
+        "feature": "loan_goal_Other, see explanation",
+        "importance": 0.009550539756047166
+      },
+      {
+        "feature": "resource::User_10",
+        "importance": 0.009085581318630145
+      }
+    ],
+    "importance_type": "mean decrease in impurity",
+    "causal_interpretation_performed": false,
+    "shap_analysis_performed": false,
+    "feature_selection_performed": false
+  },
+  "reproducibility": {
+    "method": "two independent fits with the fixed train-only configuration",
+    "classes_exact": true,
+    "positive_probability_column_exact": true,
+    "estimator_count_exact": true,
+    "tree_depths_exact": true,
+    "leaf_counts_exact": true,
+    "predictions_exact": true,
+    "probabilities_exact": true,
+    "feature_importances_exact": true,
+    "metrics_exact": true,
+    "numerical_results_identical": true,
+    "model_artifact_byte_comparison": "not_applicable_model_not_saved",
+    "result": "PASS"
+  },
+  "input_artifacts": {
+    "data/processed/baseline_k10/X_train_tree.npz": "36c87be9f38794fe837ae7112c1c627b3f60d731f08557480227ef75d5391c2d",
+    "data/processed/baseline_k10/X_test_tree.npz": "59f619ca36548b57cd0451e50b021020f9b1d09e3e96488b85f548e3f87e0a29",
+    "data/processed/baseline_k10/y_train.npy": "0f79ba4e202caffabd9f4324694570667a17a03b20264ec610ac483125964ec5",
+    "data/processed/baseline_k10/y_test.npy": "b5c1dc653fe1b102d36502c9bb136263937934e96c1601af634645cc961e1f93",
+    "results/baseline_v1/test_case_ids.csv": "a16351af6ed5d7c297ba9f652f05079c66925c3591f5de11f93530129cd90125",
+    "results/baseline_v1/feature_names_tree.csv": "1a5ac656d7eeacb711041a711f32f54d93ebd18d3be46367c59b059961f3ce93",
+    "results/baseline_v1/preprocessing_manifest.json": "e7c0cdcfae7d1d8d32d340371d31209fad0c8c4d33269822f07bea6257cf702f",
+    "results/baseline_v1/split_summary.json": "79e4e1cf28ceae8d412cbf5723a81b6a6e87a926545574e67642affa05c853c1",
+    "results/baseline_v1/dummy_metrics.json": "4eea90f2d4350ba7c8bcb267a3a67e82de7d244c7edef01e8961bbfc3c4f67a1",
+    "results/baseline_v1/logistic_metrics.json": "eb3b12e0484c4ea910254263e95d534f75b81d09e19dcbd6db4c6f580f7a01c4"
+  },
+  "assertions": {
+    "A_X_train_tree_shape_25100_by_165": "PASS",
+    "B_X_test_tree_shape_6276_by_165": "PASS",
+    "C_y_train_length_25100": "PASS",
+    "D_y_test_length_6276": "PASS",
+    "E_train_target_distribution": "PASS",
+    "F_test_target_distribution": "PASS",
+    "G_prediction_length_6276": "PASS",
+    "H_probability_length_6276": "PASS",
+    "I_probabilities_finite": "PASS",
+    "J_probabilities_in_unit_interval": "PASS",
+    "K_predicted_labels_binary": "PASS",
+    "L_positive_probability_column_is_class_1": "PASS",
+    "M_prediction_order_matches_test_case_ids": "PASS",
+    "N_preprocessing_artifacts_unmodified": "PASS",
+    "O_training_used_only_frozen_training_rows_and_labels": "PASS",
+    "P_no_test_label_participated_in_fitting": "PASS",
+    "Q_class_weight_is_none": "PASS",
+    "R_no_hyperparameter_search": "PASS",
+    "S_no_cross_validation": "PASS",
+    "T_no_classification_threshold_optimization": "PASS",
+    "U_n_estimators_is_300": "PASS",
+    "V_feature_name_count_is_165": "PASS",
+    "W_feature_names_are_unique": "PASS"
+  }
+}

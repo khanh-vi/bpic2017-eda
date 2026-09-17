@@ -1,0 +1,95 @@
+{
+  "baseline_version": "v1_part5",
+  "model_name": "DummyClassifier",
+  "model_parameters": {
+    "strategy": "prior",
+    "random_state": 42
+  },
+  "fit_scope": "train_only",
+  "reported_evaluation_split": "test",
+  "positive_class": 1,
+  "positive_class_name": "Success",
+  "classifier_classes": [
+    0,
+    1
+  ],
+  "positive_probability_column_index": 1,
+  "train_cases": 25100,
+  "test_cases": 6276,
+  "train_target_counts": {
+    "0": 11322,
+    "1": 13778
+  },
+  "test_target_counts": {
+    "0": 2826,
+    "1": 3450
+  },
+  "training_success_prior": 0.5489243027888446,
+  "roc_auc": 0.5,
+  "average_precision": 0.5497131931166348,
+  "average_precision_label": "PR-AUC (Average Precision)",
+  "accuracy": 0.5497131931166348,
+  "precision": 0.5497131931166348,
+  "recall": 1.0,
+  "f1": 0.7094386181369525,
+  "confusion_matrix": {
+    "labels": [
+      0,
+      1
+    ],
+    "rows": "true labels",
+    "columns": "predicted labels",
+    "values": [
+      [
+        0,
+        2826
+      ],
+      [
+        0,
+        3450
+      ]
+    ]
+  },
+  "classification_decision_rule": "DummyClassifier.predict default decision (highest learned class prior); no test-set threshold selection or tuning",
+  "threshold_optimization": false,
+  "test_labels_used_for_threshold_selection": false,
+  "input_artifacts": {
+    "y_train": "data/processed/baseline_k10/y_train.npy",
+    "y_test": "data/processed/baseline_k10/y_test.npy",
+    "canonical_test_ids": "results/baseline_v1/test_case_ids.csv",
+    "sha256": {
+      "y_train": "0f79ba4e202caffabd9f4324694570667a17a03b20264ec610ac483125964ec5",
+      "y_test": "b5c1dc653fe1b102d36502c9bb136263937934e96c1601af634645cc961e1f93",
+      "canonical_test_ids": "a16351af6ed5d7c297ba9f652f05079c66925c3591f5de11f93530129cd90125"
+    }
+  },
+  "placeholder_features": {
+    "reason": "DummyClassifier ignores feature values",
+    "train_shape": [
+      25100,
+      1
+    ],
+    "test_shape": [
+      6276,
+      1
+    ]
+  },
+  "assertions": {
+    "A_y_train_length_25100": "PASS",
+    "B_y_test_length_6276": "PASS",
+    "C_target_distributions_match_part3": "PASS",
+    "D_test_prediction_count_6276": "PASS",
+    "E_test_probability_count_6276": "PASS",
+    "F_probabilities_finite": "PASS",
+    "G_probabilities_in_unit_interval": "PASS",
+    "H_predicted_labels_binary": "PASS",
+    "I_classifier_fit_on_train_only": "PASS",
+    "J_success_probability_uses_class_label_1": "PASS",
+    "K_prediction_order_matches_canonical_test_ids": "PASS",
+    "L_no_test_label_threshold_selection": "PASS",
+    "M_part4_preprocessing_not_fit_or_modified": "PASS",
+    "N_success_probability_equals_training_prior": "PASS",
+    "O_success_probability_constant_across_test": "PASS",
+    "P_roc_auc_is_constant_score_half": "PASS"
+  }
+}

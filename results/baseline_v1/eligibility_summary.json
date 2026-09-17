@@ -1,0 +1,18 @@
+{
+  "prediction_point": 10,
+  "total_cases": 31509,
+  "valid_target_cases": 31411,
+  "unresolved_cases": 98,
+  "cases_lt_k_events": 0,
+  "outcome_at_or_before_k": 35,
+  "eligible_cases": 31376,
+  "eligible_success": 17228,
+  "eligible_unsuccessful": 14148,
+  "outcome_leakage_pass": true,
+  "future_event_leakage_pass": true,
+  "sequential_exclusion_counts": {
+    "no_valid_target": 98,
+    "fewer_than_k_after_valid_target": 0,
+    "outcome_at_or_before_k_after_length_filter": 35
+  }
+}

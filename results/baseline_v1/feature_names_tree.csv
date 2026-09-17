@@ -1,0 +1,166 @@
+feature_index,feature_name,source_group
+0,requested_amount,numeric
+1,n_unique_activities,numeric
+2,n_unique_resources,numeric
+3,prefix_duration_seconds,numeric
+4,mean_event_gap_seconds,numeric
+5,loan_goal_Boat,categorical::loan_goal
+6,loan_goal_Business goal,categorical::loan_goal
+7,loan_goal_Car,categorical::loan_goal
+8,loan_goal_Caravan / Camper,categorical::loan_goal
+9,loan_goal_Debt restructuring,categorical::loan_goal
+10,loan_goal_Existing loan takeover,categorical::loan_goal
+11,loan_goal_Extra spending limit,categorical::loan_goal
+12,loan_goal_Home improvement,categorical::loan_goal
+13,loan_goal_Motorcycle,categorical::loan_goal
+14,loan_goal_Not speficied,categorical::loan_goal
+15,"loan_goal_Other, see explanation",categorical::loan_goal
+16,loan_goal_Remaining debt home,categorical::loan_goal
+17,loan_goal_Tax payments,categorical::loan_goal
+18,loan_goal_Unknown,categorical::loan_goal
+19,application_type_Limit raise,categorical::application_type
+20,application_type_New credit,categorical::application_type
+21,action::Created,structured_map::action
+22,action::Deleted,structured_map::action
+23,action::Obtained,structured_map::action
+24,action::Released,structured_map::action
+25,action::statechange,structured_map::action
+26,activity::A_Accepted,structured_map::activity
+27,activity::A_Concept,structured_map::activity
+28,activity::A_Create Application,structured_map::activity
+29,activity::A_Submitted,structured_map::activity
+30,activity::O_Cancelled,structured_map::activity
+31,activity::O_Create Offer,structured_map::activity
+32,activity::O_Created,structured_map::activity
+33,activity::O_Sent (mail and online),structured_map::activity
+34,activity::O_Sent (online only),structured_map::activity
+35,activity::W_Assess potential fraud,structured_map::activity
+36,activity::W_Call after offers,structured_map::activity
+37,activity::W_Complete application,structured_map::activity
+38,activity::W_Handle leads,structured_map::activity
+39,activity::W_Shortened completion ,structured_map::activity
+40,lifecycle::ate_abort,structured_map::lifecycle
+41,lifecycle::complete,structured_map::lifecycle
+42,lifecycle::resume,structured_map::lifecycle
+43,lifecycle::schedule,structured_map::lifecycle
+44,lifecycle::start,structured_map::lifecycle
+45,lifecycle::suspend,structured_map::lifecycle
+46,lifecycle::withdraw,structured_map::lifecycle
+47,origin::Application,structured_map::origin
+48,origin::Offer,structured_map::origin
+49,origin::Workflow,structured_map::origin
+50,resource::User_1,structured_map::resource
+51,resource::User_10,structured_map::resource
+52,resource::User_100,structured_map::resource
+53,resource::User_101,structured_map::resource
+54,resource::User_102,structured_map::resource
+55,resource::User_103,structured_map::resource
+56,resource::User_104,structured_map::resource
+57,resource::User_106,structured_map::resource
+58,resource::User_107,structured_map::resource
+59,resource::User_108,structured_map::resource
+60,resource::User_109,structured_map::resource
+61,resource::User_11,structured_map::resource
+62,resource::User_110,structured_map::resource
+63,resource::User_111,structured_map::resource
+64,resource::User_112,structured_map::resource
+65,resource::User_118,structured_map::resource
+66,resource::User_12,structured_map::resource
+67,resource::User_120,structured_map::resource
+68,resource::User_13,structured_map::resource
+69,resource::User_132,structured_map::resource
+70,resource::User_138,structured_map::resource
+71,resource::User_14,structured_map::resource
+72,resource::User_141,structured_map::resource
+73,resource::User_142,structured_map::resource
+74,resource::User_143,structured_map::resource
+75,resource::User_144,structured_map::resource
+76,resource::User_145,structured_map::resource
+77,resource::User_146,structured_map::resource
+78,resource::User_15,structured_map::resource
+79,resource::User_16,structured_map::resource
+80,resource::User_17,structured_map::resource
+81,resource::User_18,structured_map::resource
+82,resource::User_19,structured_map::resource
+83,resource::User_2,structured_map::resource
+84,resource::User_20,structured_map::resource
+85,resource::User_21,structured_map::resource
+86,resource::User_22,structured_map::resource
+87,resource::User_23,structured_map::resource
+88,resource::User_24,structured_map::resource
+89,resource::User_25,structured_map::resource
+90,resource::User_26,structured_map::resource
+91,resource::User_27,structured_map::resource
+92,resource::User_28,structured_map::resource
+93,resource::User_29,structured_map::resource
+94,resource::User_3,structured_map::resource
+95,resource::User_30,structured_map::resource
+96,resource::User_31,structured_map::resource
+97,resource::User_32,structured_map::resource
+98,resource::User_33,structured_map::resource
+99,resource::User_34,structured_map::resource
+100,resource::User_35,structured_map::resource
+101,resource::User_36,structured_map::resource
+102,resource::User_37,structured_map::resource
+103,resource::User_38,structured_map::resource
+104,resource::User_39,structured_map::resource
+105,resource::User_4,structured_map::resource
+106,resource::User_40,structured_map::resource
+107,resource::User_41,structured_map::resource
+108,resource::User_42,structured_map::resource
+109,resource::User_43,structured_map::resource
+110,resource::User_44,structured_map::resource
+111,resource::User_45,structured_map::resource
+112,resource::User_46,structured_map::resource
+113,resource::User_47,structured_map::resource
+114,resource::User_48,structured_map::resource
+115,resource::User_49,structured_map::resource
+116,resource::User_5,structured_map::resource
+117,resource::User_50,structured_map::resource
+118,resource::User_51,structured_map::resource
+119,resource::User_52,structured_map::resource
+120,resource::User_53,structured_map::resource
+121,resource::User_54,structured_map::resource
+122,resource::User_55,structured_map::resource
+123,resource::User_56,structured_map::resource
+124,resource::User_57,structured_map::resource
+125,resource::User_58,structured_map::resource
+126,resource::User_59,structured_map::resource
+127,resource::User_6,structured_map::resource
+128,resource::User_60,structured_map::resource
+129,resource::User_61,structured_map::resource
+130,resource::User_62,structured_map::resource
+131,resource::User_63,structured_map::resource
+132,resource::User_64,structured_map::resource
+133,resource::User_65,structured_map::resource
+134,resource::User_66,structured_map::resource
+135,resource::User_67,structured_map::resource
+136,resource::User_68,structured_map::resource
+137,resource::User_7,structured_map::resource
+138,resource::User_70,structured_map::resource
+139,resource::User_71,structured_map::resource
+140,resource::User_73,structured_map::resource
+141,resource::User_74,structured_map::resource
+142,resource::User_75,structured_map::resource
+143,resource::User_76,structured_map::resource
+144,resource::User_77,structured_map::resource
+145,resource::User_78,structured_map::resource
+146,resource::User_79,structured_map::resource
+147,resource::User_8,structured_map::resource
+148,resource::User_80,structured_map::resource
+149,resource::User_82,structured_map::resource
+150,resource::User_83,structured_map::resource
+151,resource::User_84,structured_map::resource
+152,resource::User_85,structured_map::resource
+153,resource::User_86,structured_map::resource
+154,resource::User_87,structured_map::resource
+155,resource::User_89,structured_map::resource
+156,resource::User_9,structured_map::resource
+157,resource::User_90,structured_map::resource
+158,resource::User_91,structured_map::resource
+159,resource::User_92,structured_map::resource
+160,resource::User_93,structured_map::resource
+161,resource::User_95,structured_map::resource
+162,resource::User_96,structured_map::resource
+163,resource::User_97,structured_map::resource
+164,resource::User_99,structured_map::resource

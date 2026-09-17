@@ -1,0 +1,277 @@
+{
+  "baseline_version": "v1_part2",
+  "prediction_point": 10,
+  "number_of_cases": 31376,
+  "input_eligible_population": "results\\baseline_v1\\eligible_cases_k10.csv",
+  "feature_availability_matrix": "results\\feature_availability_matrix.csv",
+  "output_dataset": "data\\processed\\baseline_k10\\case_features_k10.parquet",
+  "output_format": "parquet",
+  "metadata_columns": [
+    "case_id",
+    "case_start_time"
+  ],
+  "target_column": "target",
+  "target_mapping": {
+    "A_Pending": 1,
+    "A_Cancelled": 0,
+    "A_Denied": 0
+  },
+  "available_source_features_considered": [
+    "case:LoanGoal",
+    "case:ApplicationType",
+    "case:RequestedAmount",
+    "concept:name",
+    "Action",
+    "EventOrigin",
+    "org:resource",
+    "lifecycle:transition",
+    "time:timestamp",
+    "EventID",
+    "case:concept:name"
+  ],
+  "included_source_features": [
+    "case:LoanGoal",
+    "case:ApplicationType",
+    "case:RequestedAmount",
+    "concept:name",
+    "Action",
+    "EventOrigin",
+    "org:resource",
+    "lifecycle:transition",
+    "time:timestamp"
+  ],
+  "included_source_feature_details": [
+    {
+      "feature": "case:LoanGoal",
+      "availability_decision": "Available",
+      "model_handling": "Candidate model feature",
+      "reason": "Observed as a case-level attribute by the prediction point.",
+      "notes": "Use the value observed in the prefix."
+    },
+    {
+      "feature": "case:ApplicationType",
+      "availability_decision": "Available",
+      "model_handling": "Candidate model feature",
+      "reason": "Observed as a case-level attribute by the prediction point.",
+      "notes": "Use the value observed in the prefix."
+    },
+    {
+      "feature": "case:RequestedAmount",
+      "availability_decision": "Available",
+      "model_handling": "Candidate model feature",
+      "reason": "Observed as a case-level attribute by the prediction point.",
+      "notes": "A value of zero is observed, not missing."
+    },
+    {
+      "feature": "concept:name",
+      "availability_decision": "Available",
+      "model_handling": "Prefix-safe encoding or aggregation",
+      "reason": "Observed event-process context is available in the prefix.",
+      "notes": "Do not encode events after the prediction point."
+    },
+    {
+      "feature": "Action",
+      "availability_decision": "Available",
+      "model_handling": "Prefix-safe encoding or aggregation",
+      "reason": "Observed event-process context is available in the prefix.",
+      "notes": "Do not encode events after the prediction point."
+    },
+    {
+      "feature": "EventOrigin",
+      "availability_decision": "Available",
+      "model_handling": "Prefix-safe encoding or aggregation",
+      "reason": "Observed event-process context is available in the prefix.",
+      "notes": "Do not encode events after the prediction point."
+    },
+    {
+      "feature": "org:resource",
+      "availability_decision": "Available",
+      "model_handling": "Evaluate raw-resource generalization separately",
+      "reason": "The resource is observed in the prefix.",
+      "notes": "Availability does not establish out-of-sample generalization."
+    },
+    {
+      "feature": "lifecycle:transition",
+      "availability_decision": "Available",
+      "model_handling": "Prefix-safe encoding or aggregation",
+      "reason": "Observed event-process context is available in the prefix.",
+      "notes": "Do not encode events after the prediction point."
+    },
+    {
+      "feature": "time:timestamp",
+      "availability_decision": "Available",
+      "model_handling": "Use prefix-derived temporal features only",
+      "reason": "Timestamps for observed prefix events are available.",
+      "notes": "Exclude final-event timestamp and total case duration."
+    }
+  ],
+  "excluded_available_features": [
+    {
+      "feature": "EventID",
+      "availability_decision": "Available",
+      "model_handling": "Exclude as a raw identifier",
+      "reason": "Observed in the prefix but unsuitable as a raw predictor.",
+      "notes": "Retain only where event identity is operationally required."
+    },
+    {
+      "feature": "case:concept:name",
+      "availability_decision": "Available",
+      "model_handling": "Exclude as a raw identifier",
+      "reason": "Observed in the prefix but unsuitable as a raw predictor.",
+      "notes": "Retain for case grouping and joins."
+    }
+  ],
+  "omitted_conditional_features": [
+    {
+      "feature": "FirstWithdrawalAmount",
+      "availability_decision": "Conditionally Available",
+      "model_handling": "Use only when observed within events 1-10",
+      "reason": "Offer creation may occur before or after the prediction point.",
+      "notes": "Never backfill from the suffix; multiple offers are valid."
+    },
+    {
+      "feature": "NumberOfTerms",
+      "availability_decision": "Conditionally Available",
+      "model_handling": "Use only when observed within events 1-10",
+      "reason": "Offer creation may occur before or after the prediction point.",
+      "notes": "Never backfill from the suffix; multiple offers are valid."
+    },
+    {
+      "feature": "Accepted",
+      "availability_decision": "Conditionally Available",
+      "model_handling": "Use only when observed within events 1-10",
+      "reason": "It does not deterministically encode later O_Accepted state.",
+      "notes": "Never backfill from the suffix; multiple offers are valid."
+    },
+    {
+      "feature": "MonthlyCost",
+      "availability_decision": "Conditionally Available",
+      "model_handling": "Use only when observed within events 1-10",
+      "reason": "Offer creation may occur before or after the prediction point.",
+      "notes": "Never backfill from the suffix; multiple offers are valid."
+    },
+    {
+      "feature": "CreditScore",
+      "availability_decision": "Conditionally Available",
+      "model_handling": "Use only when observed within events 1-10",
+      "reason": "Offer creation may occur before or after the prediction point.",
+      "notes": "Never backfill from the suffix; multiple offers are valid."
+    },
+    {
+      "feature": "OfferedAmount",
+      "availability_decision": "Conditionally Available",
+      "model_handling": "Use only when observed within events 1-10",
+      "reason": "Offer creation may occur before or after the prediction point.",
+      "notes": "Never backfill from the suffix; multiple offers are valid."
+    },
+    {
+      "feature": "OfferID",
+      "availability_decision": "Conditionally Available",
+      "model_handling": "Exclude raw ID; retain for offer grouping",
+      "reason": "Prefix availability is conditional and the value is an ID.",
+      "notes": "Multiple offer IDs within a case are valid."
+    }
+  ],
+  "omitted_leakage_risk_features": [
+    {
+      "feature": "Selected",
+      "availability_decision": "Leakage Risk",
+      "model_handling": "Exclude",
+      "reason": "It reflects later offer lifecycle or customer selection.",
+      "notes": "Recorded on O_Create Offer but treated as future-derived."
+    }
+  ],
+  "static_source_features": {
+    "case:LoanGoal": "loan_goal",
+    "case:ApplicationType": "application_type",
+    "case:RequestedAmount": "requested_amount"
+  },
+  "derived_prefix_features": {
+    "per_case_count_maps": {
+      "concept:name": "activity_counts",
+      "Action": "action_counts",
+      "EventOrigin": "event_origin_counts",
+      "org:resource": "resource_counts",
+      "lifecycle:transition": "lifecycle_transition_counts"
+    },
+    "prefix_summary": [
+      "n_unique_activities",
+      "n_unique_resources",
+      "prefix_duration_seconds",
+      "mean_event_gap_seconds"
+    ]
+  },
+  "predictive_feature_columns": [
+    "loan_goal",
+    "application_type",
+    "requested_amount",
+    "activity_counts",
+    "action_counts",
+    "event_origin_counts",
+    "resource_counts",
+    "lifecycle_transition_counts",
+    "n_unique_activities",
+    "n_unique_resources",
+    "prefix_duration_seconds",
+    "mean_event_gap_seconds"
+  ],
+  "numeric_feature_columns": [
+    "requested_amount",
+    "n_unique_activities",
+    "n_unique_resources",
+    "prefix_duration_seconds",
+    "mean_event_gap_seconds"
+  ],
+  "categorical_or_structured_feature_columns": [
+    "loan_goal",
+    "application_type",
+    "activity_counts",
+    "action_counts",
+    "event_origin_counts",
+    "resource_counts",
+    "lifecycle_transition_counts"
+  ],
+  "activity_vocabulary_deferred_to_train_only_processing": true,
+  "activity_vocabulary_strategy": "activity_counts is a deterministic JSON object per case. No global activity vocabulary is created in Part 2. After the temporal split, fit/freeze keys on training cases only and handle unseen test keys explicitly. The same strategy applies to the other event count maps.",
+  "excluded_from_predictive_features": [
+    "case_id",
+    "case_start_time",
+    "target",
+    "outcome_activity",
+    "outcome_position",
+    "n_events"
+  ],
+  "validation": {
+    "output_rows": 31376,
+    "output_columns": 15,
+    "predictive_feature_count": 12,
+    "numeric_feature_count": 5,
+    "categorical_or_structured_feature_count": 7,
+    "missing_value_counts": {
+      "case_id": 0,
+      "case_start_time": 0,
+      "target": 0,
+      "loan_goal": 0,
+      "application_type": 0,
+      "requested_amount": 0,
+      "activity_counts": 0,
+      "action_counts": 0,
+      "event_origin_counts": 0,
+      "resource_counts": 0,
+      "lifecycle_transition_counts": 0,
+      "n_unique_activities": 0,
+      "n_unique_resources": 0,
+      "prefix_duration_seconds": 0,
+      "mean_event_gap_seconds": 0
+    },
+    "missing_value_counts_nonzero": {},
+    "total_missing_values": 0,
+    "constant_predictive_columns": [],
+    "duplicate_case_id_rows": 0,
+    "duplicate_full_rows": 0,
+    "duplicate_predictor_rows": 0,
+    "part1_outcome_leakage_audit": "PASS",
+    "part1_future_event_leakage_audit": "PASS",
+    "part2_assertions": "PASS"
+  }
+}

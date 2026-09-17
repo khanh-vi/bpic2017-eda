@@ -1,0 +1,287 @@
+{
+  "baseline_version": "v1_part4",
+  "prediction_point": 10,
+  "preprocessing_fit_scope": "train_only",
+  "classifier_trained": false,
+  "split_sizes": {
+    "train": 25100,
+    "test": 6276
+  },
+  "target_distributions": {
+    "train": {
+      "0": 11322,
+      "1": 13778
+    },
+    "test": {
+      "0": 2826,
+      "1": 3450
+    }
+  },
+  "inputs": {
+    "feature_table": "data/processed/baseline_k10/case_features_k10.parquet",
+    "feature_manifest": "results/baseline_v1/feature_manifest.json",
+    "split_summary": "results/baseline_v1/split_summary.json",
+    "canonical_train_ids": "results/baseline_v1/train_case_ids.csv",
+    "canonical_test_ids": "results/baseline_v1/test_case_ids.csv",
+    "sha256": {
+      "feature_table": "2600f00f0c5f7ee6c1d129cc8e5b8081493944601a5d0e7a35692e0dbdc81668",
+      "feature_manifest": "3be21eff91574b7affb7636e5f96c9766a504ddc89ab343ca0cbd25200384a16",
+      "split_summary": "79e4e1cf28ceae8d412cbf5723a81b6a6e87a926545574e67642affa05c853c1",
+      "canonical_train_ids": "eebf72befbbd3f5f2b9dc6f46f400224e487a3ad66379e250f68b741f6d5bff3",
+      "canonical_test_ids": "a16351af6ed5d7c297ba9f652f05079c66925c3591f5de11f93530129cd90125"
+    }
+  },
+  "source_column_dtypes": {
+    "case_id": "str",
+    "case_start_time": "datetime64[ns, UTC]",
+    "target": "int8",
+    "loan_goal": "str",
+    "application_type": "str",
+    "requested_amount": "float64",
+    "activity_counts": "str",
+    "action_counts": "str",
+    "event_origin_counts": "str",
+    "resource_counts": "str",
+    "lifecycle_transition_counts": "str",
+    "n_unique_activities": "int16",
+    "n_unique_resources": "int16",
+    "prefix_duration_seconds": "float64",
+    "mean_event_gap_seconds": "float64"
+  },
+  "count_map_storage_and_parser": {
+    "parquet_storage": "JSON string",
+    "parser": "json.loads with duplicate-key rejection"
+  },
+  "software_versions": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "pyarrow": "25.0.1",
+    "scipy": "1.18.1",
+    "scikit_learn": "1.9.1",
+    "joblib": "1.6.0"
+  },
+  "predictor_groups": {
+    "numeric": [
+      "requested_amount",
+      "n_unique_activities",
+      "n_unique_resources",
+      "prefix_duration_seconds",
+      "mean_event_gap_seconds"
+    ],
+    "static_categorical": [
+      "loan_goal",
+      "application_type"
+    ],
+    "structured_count_maps": {
+      "activity_counts": "activity",
+      "action_counts": "action",
+      "event_origin_counts": "origin",
+      "resource_counts": "resource",
+      "lifecycle_transition_counts": "lifecycle"
+    },
+    "excluded_metadata": [
+      "case_id",
+      "case_start_time"
+    ],
+    "excluded_target": "target"
+  },
+  "train_fitted_sizes": {
+    "numeric_features": 5,
+    "categorical": {
+      "loan_goal": 14,
+      "application_type": 2
+    },
+    "structured": {
+      "activity": 14,
+      "action": 5,
+      "origin": 3,
+      "resource": 115,
+      "lifecycle": 7
+    }
+  },
+  "test_only_unknowns": {
+    "loan_goal": {
+      "train_vocabulary_size": 14,
+      "test_only_count": 0,
+      "test_only_values": [],
+      "test_rows_affected": 0
+    },
+    "application_type": {
+      "train_vocabulary_size": 2,
+      "test_only_count": 0,
+      "test_only_values": [],
+      "test_rows_affected": 0
+    },
+    "activity": {
+      "train_vocabulary_size": 14,
+      "test_only_count": 0,
+      "test_only_values": [],
+      "test_rows_affected": 0
+    },
+    "action": {
+      "train_vocabulary_size": 5,
+      "test_only_count": 0,
+      "test_only_values": [],
+      "test_rows_affected": 0
+    },
+    "origin": {
+      "train_vocabulary_size": 3,
+      "test_only_count": 0,
+      "test_only_values": [],
+      "test_rows_affected": 0
+    },
+    "resource": {
+      "train_vocabulary_size": 115,
+      "test_only_count": 9,
+      "test_only_values": [
+        "User_105",
+        "User_135",
+        "User_140",
+        "User_69",
+        "User_72",
+        "User_81",
+        "User_88",
+        "User_94",
+        "User_98"
+      ],
+      "test_rows_affected": 1414
+    },
+    "lifecycle": {
+      "train_vocabulary_size": 7,
+      "test_only_count": 0,
+      "test_only_values": [],
+      "test_rows_affected": 0
+    }
+  },
+  "representations": {
+    "linear": {
+      "numeric_processing": "StandardScaler fitted on train only",
+      "feature_dimension": 165,
+      "train_matrix": {
+        "rows": 25100,
+        "columns": 165,
+        "nonzero_entries": 688868,
+        "density": 0.16633297114572015,
+        "sparsity": 0.8336670288542798,
+        "format": "csr",
+        "dtype": "float64"
+      },
+      "test_matrix": {
+        "rows": 6276,
+        "columns": 165,
+        "nonzero_entries": 170487,
+        "density": 0.16463584216930296,
+        "sparsity": 0.8353641578306971,
+        "format": "csr",
+        "dtype": "float64"
+      }
+    },
+    "tree": {
+      "numeric_processing": "unscaled",
+      "feature_dimension": 165,
+      "train_matrix": {
+        "rows": 25100,
+        "columns": 165,
+        "nonzero_entries": 686254,
+        "density": 0.16570179886514547,
+        "sparsity": 0.8342982011348545,
+        "format": "csr",
+        "dtype": "float64"
+      },
+      "test_matrix": {
+        "rows": 6276,
+        "columns": 165,
+        "nonzero_entries": 170037,
+        "density": 0.1642012862854163,
+        "sparsity": 0.8357987137145837,
+        "format": "csr",
+        "dtype": "float64"
+      }
+    },
+    "shared_processing": "train-fitted OneHotEncoder and DictVectorizer"
+  },
+  "linear_numeric_scaler": {
+    "feature_order": [
+      "requested_amount",
+      "n_unique_activities",
+      "n_unique_resources",
+      "prefix_duration_seconds",
+      "mean_event_gap_seconds"
+    ],
+    "mean": [
+      15781.5748749004,
+      6.811115537848606,
+      2.180956175298805,
+      100179.75840498008,
+      11131.084267220009
+    ],
+    "variance": [
+      231111540.94866192,
+      1.9898605085633558,
+      0.6941074522626623,
+      17680775408.52824,
+      218281177.8830647
+    ],
+    "scale": [
+      15202.353138532926,
+      1.4106241556712957,
+      0.8331311134885447,
+      132969.07688830604,
+      14774.341876478447
+    ],
+    "samples_seen": 25100
+  },
+  "zero_variance_train_features": {
+    "count": 1,
+    "features": [
+      {
+        "feature_name": "activity::A_Create Application",
+        "source_group": "structured_map::activity"
+      }
+    ],
+    "removed": false
+  },
+  "feature_names": {
+    "linear": "results/baseline_v1/feature_names_linear.csv",
+    "tree": "results/baseline_v1/feature_names_tree.csv",
+    "deterministic": true,
+    "unique": true
+  },
+  "saved_artifacts": {
+    "shared_preprocessing_components": "artifacts/baseline_v1/preprocessing_components.joblib",
+    "X_train_linear": "data/processed/baseline_k10/X_train_linear.npz",
+    "X_test_linear": "data/processed/baseline_k10/X_test_linear.npz",
+    "X_train_tree": "data/processed/baseline_k10/X_train_tree.npz",
+    "X_test_tree": "data/processed/baseline_k10/X_test_tree.npz",
+    "y_train": "data/processed/baseline_k10/y_train.npy",
+    "y_test": "data/processed/baseline_k10/y_test.npy"
+  },
+  "component_fit_rows": {
+    "OneHotEncoder": 25100,
+    "DictVectorizer": 25100,
+    "StandardScaler": 25100
+  },
+  "assertions": {
+    "A_train_row_count": "PASS",
+    "B_test_row_count": "PASS",
+    "C_frozen_case_ids_exact": "PASS",
+    "D_target_distributions": "PASS",
+    "E_identical_train_test_dimensions": "PASS",
+    "F_unique_feature_names": "PASS",
+    "G_no_nan": "PASS",
+    "H_no_infinity": "PASS",
+    "I_case_id_excluded": "PASS",
+    "J_case_start_time_excluded": "PASS",
+    "K_target_excluded": "PASS",
+    "L_outcome_and_audit_fields_excluded": "PASS",
+    "M_A_Pending_absent": "PASS",
+    "N_A_Cancelled_absent": "PASS",
+    "O_A_Denied_absent": "PASS",
+    "P_all_categories_occur_in_train": "PASS",
+    "Q_all_structured_keys_occur_in_train": "PASS",
+    "R_test_only_categories_not_fitted": "PASS",
+    "S_test_only_structured_keys_not_fitted": "PASS",
+    "T_scaler_statistics_from_train_only": "PASS",
+    "U_all_components_fitted_on_train_only": "PASS"
+  }
+}
