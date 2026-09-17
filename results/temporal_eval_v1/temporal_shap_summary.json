@@ -1,0 +1,645 @@
+{
+  "experiment": "temporal_evaluation_v1",
+  "stage": "part_3_temporal_shap_analysis",
+  "positive_class": 1,
+  "positive_class_name": "Success",
+  "shap_cases": 1000,
+  "feature_count": 165,
+  "shap_matrix_shape": [
+    1000,
+    165
+  ],
+  "canonical_shap_file_sha256": "a01994419b95950b5c1b6446c841d82d0715669ac0ff17e4b6fad9bfdf79da03",
+  "window_counts": {
+    "T1": 325,
+    "T2": 332,
+    "T3": 343
+  },
+  "window_target_counts": {
+    "T1": {
+      "0": 140,
+      "1": 185
+    },
+    "T2": {
+      "0": 137,
+      "1": 195
+    },
+    "T3": {
+      "0": 154,
+      "1": 189
+    }
+  },
+  "top_k": 10,
+  "per_window_top10": {
+    "T1": [
+      {
+        "rank": 1,
+        "feature": "requested_amount",
+        "mean_abs_shap": 0.028757275743798,
+        "mean_signed_shap": -0.002600770324564
+      },
+      {
+        "rank": 2,
+        "feature": "mean_event_gap_seconds",
+        "mean_abs_shap": 0.017290062694566,
+        "mean_signed_shap": -0.000169252075459
+      },
+      {
+        "rank": 3,
+        "feature": "prefix_duration_seconds",
+        "mean_abs_shap": 0.017069344145579,
+        "mean_signed_shap": -0.000509308661496
+      },
+      {
+        "rank": 4,
+        "feature": "resource::User_1",
+        "mean_abs_shap": 0.011404069331776,
+        "mean_signed_shap": -0.001601210666069
+      },
+      {
+        "rank": 5,
+        "feature": "activity::A_Submitted",
+        "mean_abs_shap": 0.010862443773397,
+        "mean_signed_shap": -0.001114310437941
+      },
+      {
+        "rank": 6,
+        "feature": "activity::W_Handle leads",
+        "mean_abs_shap": 0.010457618740321,
+        "mean_signed_shap": -0.00174214734862
+      },
+      {
+        "rank": 7,
+        "feature": "loan_goal_Home improvement",
+        "mean_abs_shap": 0.009123891494821,
+        "mean_signed_shap": 0.000385558436639
+      },
+      {
+        "rank": 8,
+        "feature": "n_unique_resources",
+        "mean_abs_shap": 0.008867885773309,
+        "mean_signed_shap": -5.3358526211e-05
+      },
+      {
+        "rank": 9,
+        "feature": "loan_goal_Car",
+        "mean_abs_shap": 0.007522624246639,
+        "mean_signed_shap": -0.000550518195453
+      },
+      {
+        "rank": 10,
+        "feature": "application_type_New credit",
+        "mean_abs_shap": 0.007243011051663,
+        "mean_signed_shap": -0.000813954915107
+      }
+    ],
+    "T2": [
+      {
+        "rank": 1,
+        "feature": "requested_amount",
+        "mean_abs_shap": 0.025440387305931,
+        "mean_signed_shap": -0.000144160154374
+      },
+      {
+        "rank": 2,
+        "feature": "mean_event_gap_seconds",
+        "mean_abs_shap": 0.0160221510102,
+        "mean_signed_shap": -0.000780133228475
+      },
+      {
+        "rank": 3,
+        "feature": "prefix_duration_seconds",
+        "mean_abs_shap": 0.015703555076759,
+        "mean_signed_shap": -0.001377292920157
+      },
+      {
+        "rank": 4,
+        "feature": "resource::User_1",
+        "mean_abs_shap": 0.011334980809879,
+        "mean_signed_shap": -5.7480554899e-05
+      },
+      {
+        "rank": 5,
+        "feature": "activity::A_Submitted",
+        "mean_abs_shap": 0.011254134829548,
+        "mean_signed_shap": -7.7467635081e-05
+      },
+      {
+        "rank": 6,
+        "feature": "activity::W_Handle leads",
+        "mean_abs_shap": 0.010491162346614,
+        "mean_signed_shap": -0.000616116477901
+      },
+      {
+        "rank": 7,
+        "feature": "n_unique_resources",
+        "mean_abs_shap": 0.010110812566645,
+        "mean_signed_shap": -0.000222271866854
+      },
+      {
+        "rank": 8,
+        "feature": "loan_goal_Home improvement",
+        "mean_abs_shap": 0.008583111591968,
+        "mean_signed_shap": 0.000352419027129
+      },
+      {
+        "rank": 9,
+        "feature": "application_type_New credit",
+        "mean_abs_shap": 0.007936876594738,
+        "mean_signed_shap": 0.000318135632929
+      },
+      {
+        "rank": 10,
+        "feature": "application_type_Limit raise",
+        "mean_abs_shap": 0.00758334684326,
+        "mean_signed_shap": 0.000418788058298
+      }
+    ],
+    "T3": [
+      {
+        "rank": 1,
+        "feature": "requested_amount",
+        "mean_abs_shap": 0.025798700015609,
+        "mean_signed_shap": -0.002012664888513
+      },
+      {
+        "rank": 2,
+        "feature": "mean_event_gap_seconds",
+        "mean_abs_shap": 0.015944520128306,
+        "mean_signed_shap": -0.001883237586928
+      },
+      {
+        "rank": 3,
+        "feature": "prefix_duration_seconds",
+        "mean_abs_shap": 0.015385633622428,
+        "mean_signed_shap": -0.001887871102052
+      },
+      {
+        "rank": 4,
+        "feature": "activity::A_Submitted",
+        "mean_abs_shap": 0.012067240691006,
+        "mean_signed_shap": -0.002813405210367
+      },
+      {
+        "rank": 5,
+        "feature": "resource::User_1",
+        "mean_abs_shap": 0.011886602863125,
+        "mean_signed_shap": -0.003335088804689
+      },
+      {
+        "rank": 6,
+        "feature": "activity::W_Handle leads",
+        "mean_abs_shap": 0.011118411305609,
+        "mean_signed_shap": -0.002920960428306
+      },
+      {
+        "rank": 7,
+        "feature": "n_unique_resources",
+        "mean_abs_shap": 0.00984215519451,
+        "mean_signed_shap": -0.002023168648859
+      },
+      {
+        "rank": 8,
+        "feature": "loan_goal_Home improvement",
+        "mean_abs_shap": 0.008864989508536,
+        "mean_signed_shap": 0.000107401572751
+      },
+      {
+        "rank": 9,
+        "feature": "loan_goal_Car",
+        "mean_abs_shap": 0.008201866464324,
+        "mean_signed_shap": -0.00142534611158
+      },
+      {
+        "rank": 10,
+        "feature": "application_type_New credit",
+        "mean_abs_shap": 0.007654290775417,
+        "mean_signed_shap": -0.000977255803761
+      }
+    ]
+  },
+  "pairwise_jaccard_at_10": [
+    {
+      "comparison": "T1_to_T2",
+      "window_a": "T1",
+      "window_b": "T2",
+      "intersection_count": 9,
+      "union_count": 11,
+      "jaccard_at_10": 0.818181818181818
+    },
+    {
+      "comparison": "T2_to_T3",
+      "window_a": "T2",
+      "window_b": "T3",
+      "intersection_count": 9,
+      "union_count": 11,
+      "jaccard_at_10": 0.818181818181818
+    },
+    {
+      "comparison": "T1_to_T3",
+      "window_a": "T1",
+      "window_b": "T3",
+      "intersection_count": 10,
+      "union_count": 10,
+      "jaccard_at_10": 1.0
+    }
+  ],
+  "pairwise_spearman_all_165_features": [
+    {
+      "comparison": "T1_to_T2",
+      "window_a": "T1",
+      "window_b": "T2",
+      "spearman_rho": 0.972852036302384,
+      "spearman_pvalue": 1.60980825450021e-105
+    },
+    {
+      "comparison": "T2_to_T3",
+      "window_a": "T2",
+      "window_b": "T3",
+      "spearman_rho": 0.973634969950382,
+      "spearman_pvalue": 1.52999664597375e-106
+    },
+    {
+      "comparison": "T1_to_T3",
+      "window_a": "T1",
+      "window_b": "T3",
+      "spearman_rho": 0.956959121605112,
+      "spearman_pvalue": 1.73488117310051e-89
+    }
+  ],
+  "metric_semantics": {
+    "jaccard_at_10": "top-10 feature-set overlap",
+    "spearman_rho": "overall ordering similarity across all 165 name-aligned features",
+    "combined_score_created": false
+  },
+  "signed_shap_union_feature_count": 11,
+  "signed_shap_zero_tolerance": 1e-12,
+  "sign_change_counts": {
+    "T1_T2": 3,
+    "T2_T3": 3,
+    "T1_T3": 0
+  },
+  "sign_change_features": {
+    "T1_T2": [
+      "loan_goal_Car",
+      "application_type_New credit",
+      "application_type_Limit raise"
+    ],
+    "T2_T3": [
+      "loan_goal_Car",
+      "application_type_New credit",
+      "application_type_Limit raise"
+    ],
+    "T1_T3": []
+  },
+  "signed_shap_interpretation": "A sign change describes a change in the frozen model's average contribution direction; it is not a causal effect.",
+  "group_importance_summary": {
+    "T1": [
+      {
+        "group": "Numeric",
+        "feature_count": 5,
+        "group_total_importance": 0.077253045067313,
+        "group_mean_importance_per_feature": 0.015450609013463,
+        "share_of_total_importance": 0.26866621198644
+      },
+      {
+        "group": "LoanGoal",
+        "feature_count": 14,
+        "group_total_importance": 0.035479066978934,
+        "group_mean_importance_per_feature": 0.002534219069924,
+        "share_of_total_importance": 0.123387065477325
+      },
+      {
+        "group": "ApplicationType",
+        "feature_count": 2,
+        "group_total_importance": 0.01409798995661,
+        "group_mean_importance_per_feature": 0.007048994978305,
+        "share_of_total_importance": 0.049029181373563
+      },
+      {
+        "group": "Activity",
+        "feature_count": 14,
+        "group_total_importance": 0.039605709096117,
+        "group_mean_importance_per_feature": 0.002828979221151,
+        "share_of_total_importance": 0.13773846489312
+      },
+      {
+        "group": "Action",
+        "feature_count": 5,
+        "group_total_importance": 0.014761935413205,
+        "group_mean_importance_per_feature": 0.002952387082641,
+        "share_of_total_importance": 0.05133821282512
+      },
+      {
+        "group": "EventOrigin",
+        "feature_count": 3,
+        "group_total_importance": 0.011457730663365,
+        "group_mean_importance_per_feature": 0.003819243554455,
+        "share_of_total_importance": 0.039847038943319
+      },
+      {
+        "group": "Resource",
+        "feature_count": 115,
+        "group_total_importance": 0.072301031218656,
+        "group_mean_importance_per_feature": 0.000628704619293,
+        "share_of_total_importance": 0.251444382073277
+      },
+      {
+        "group": "Lifecycle",
+        "feature_count": 7,
+        "group_total_importance": 0.022586329598439,
+        "group_mean_importance_per_feature": 0.003226618514063,
+        "share_of_total_importance": 0.078549442427835
+      }
+    ],
+    "T2": [
+      {
+        "group": "Numeric",
+        "feature_count": 5,
+        "group_total_importance": 0.071965420841817,
+        "group_mean_importance_per_feature": 0.014393084168363,
+        "share_of_total_importance": 0.260259136977535
+      },
+      {
+        "group": "LoanGoal",
+        "feature_count": 14,
+        "group_total_importance": 0.037326333054711,
+        "group_mean_importance_per_feature": 0.002666166646765,
+        "share_of_total_importance": 0.134988708656453
+      },
+      {
+        "group": "ApplicationType",
+        "feature_count": 2,
+        "group_total_importance": 0.015520223437998,
+        "group_mean_importance_per_feature": 0.007760111718999,
+        "share_of_total_importance": 0.056128066930231
+      },
+      {
+        "group": "Activity",
+        "feature_count": 14,
+        "group_total_importance": 0.039589669744929,
+        "group_mean_importance_per_feature": 0.002827833553209,
+        "share_of_total_importance": 0.14317394604957
+      },
+      {
+        "group": "Action",
+        "feature_count": 5,
+        "group_total_importance": 0.013786616774616,
+        "group_mean_importance_per_feature": 0.002757323354923,
+        "share_of_total_importance": 0.04985857015258
+      },
+      {
+        "group": "EventOrigin",
+        "feature_count": 3,
+        "group_total_importance": 0.010752271606124,
+        "group_mean_importance_per_feature": 0.003584090535375,
+        "share_of_total_importance": 0.038885021389769
+      },
+      {
+        "group": "Resource",
+        "feature_count": 115,
+        "group_total_importance": 0.06608434113668,
+        "group_mean_importance_per_feature": 0.000574646444667,
+        "share_of_total_importance": 0.23899052337602
+      },
+      {
+        "group": "Lifecycle",
+        "feature_count": 7,
+        "group_total_importance": 0.021489606919717,
+        "group_mean_importance_per_feature": 0.003069943845674,
+        "share_of_total_importance": 0.077716026467842
+      }
+    ],
+    "T3": [
+      {
+        "group": "Numeric",
+        "feature_count": 5,
+        "group_total_importance": 0.071725582809764,
+        "group_mean_importance_per_feature": 0.014345116561953,
+        "share_of_total_importance": 0.263090482130966
+      },
+      {
+        "group": "LoanGoal",
+        "feature_count": 14,
+        "group_total_importance": 0.03556851311016,
+        "group_mean_importance_per_feature": 0.002540608079297,
+        "share_of_total_importance": 0.130465823995502
+      },
+      {
+        "group": "ApplicationType",
+        "feature_count": 2,
+        "group_total_importance": 0.014495252380977,
+        "group_mean_importance_per_feature": 0.007247626190488,
+        "share_of_total_importance": 0.053168796796476
+      },
+      {
+        "group": "Activity",
+        "feature_count": 14,
+        "group_total_importance": 0.041715724304978,
+        "group_mean_importance_per_feature": 0.002979694593213,
+        "share_of_total_importance": 0.153013884166655
+      },
+      {
+        "group": "Action",
+        "feature_count": 5,
+        "group_total_importance": 0.013475454611378,
+        "group_mean_importance_per_feature": 0.002695090922276,
+        "share_of_total_importance": 0.049428163728476
+      },
+      {
+        "group": "EventOrigin",
+        "feature_count": 3,
+        "group_total_importance": 0.011371472349639,
+        "group_mean_importance_per_feature": 0.003790490783213,
+        "share_of_total_importance": 0.041710726156669
+      },
+      {
+        "group": "Resource",
+        "feature_count": 115,
+        "group_total_importance": 0.061513492826506,
+        "group_mean_importance_per_feature": 0.000534899937622,
+        "share_of_total_importance": 0.225632387375765
+      },
+      {
+        "group": "Lifecycle",
+        "feature_count": 7,
+        "group_total_importance": 0.022761560583982,
+        "group_mean_importance_per_feature": 0.003251651511997,
+        "share_of_total_importance": 0.083489735649491
+      }
+    ]
+  },
+  "group_total_interpretation": "Group totals and shares are influenced by encoded feature_count; Resource has 115 dimensions, so use feature_count and mean per feature too.",
+  "shap_recomputed": false,
+  "model_retrained": false,
+  "preprocessing_refitted": false,
+  "shap_sample_resampled": false,
+  "temporal_boundaries_changed": false,
+  "prediction_metrics_recomputed_for_synthesis": false,
+  "prediction_explanation_synthesis_created": false,
+  "formal_drift_detection": false,
+  "significance_testing_used_for_conclusion": false,
+  "spearman_pvalue_use": "stored for completeness only",
+  "assertions": {
+    "A_shap_matrix_shape_1000_by_165": "PASS",
+    "B_feature_count_165": "PASS",
+    "C_feature_names_unique": "PASS",
+    "D_shap_matrix_hash_matches_manifest": "PASS",
+    "E_temporal_shap_windows_exactly_1000_rows": "PASS",
+    "F_T1_exactly_325_cases": "PASS",
+    "G_T2_exactly_332_cases": "PASS",
+    "H_T3_exactly_343_cases": "PASS",
+    "I_sample_order_unique": "PASS",
+    "J_sample_order_covers_0_through_999": "PASS",
+    "K_no_shap_case_added": "PASS",
+    "L_no_shap_case_removed": "PASS",
+    "M_no_shap_case_resampled": "PASS",
+    "N_every_importance_window_has_165_features": "PASS",
+    "O_every_window_has_ranks_1_through_165": "PASS",
+    "P_top10_output_has_30_rows": "PASS",
+    "Q_every_window_has_10_top_features": "PASS",
+    "R_jaccard_within_zero_and_one": "PASS",
+    "S_jaccard_counts_internally_consistent": "PASS",
+    "T_spearman_finite_and_within_bounds": "PASS",
+    "U_spearman_features_aligned_by_name": "PASS",
+    "V_signed_analysis_uses_only_union_top10": "PASS",
+    "W_all_165_features_map_to_one_group": "PASS",
+    "X_group_feature_counts_sum_to_165": "PASS",
+    "Y_group_shares_sum_to_one": "PASS",
+    "Z_no_shap_computation_occurred": "PASS",
+    "AA_no_explainer_created": "PASS",
+    "AB_no_model_fitting_occurred": "PASS",
+    "AC_no_preprocessing_fitting_occurred": "PASS",
+    "AD_no_temporal_boundaries_changed": "PASS",
+    "AE_no_prediction_metric_recomputed_for_synthesis": "PASS",
+    "AF_no_formal_drift_test_occurred": "PASS"
+  },
+  "assertion_status": "PASS",
+  "protected_artifacts": {
+    "count": 111,
+    "unchanged": true,
+    "sha256": {
+      "artifacts/baseline_v1/preprocessing_components.joblib": "3da619e4c43b8482b8dca5bfb5abefe68a5183ddc0c96a24b83e0f59d54f3281",
+      "artifacts/shap_pilot_v1/random_forest_baseline.joblib": "d3851aa948fb78d0c827849e864e82836f5988f5dadb9952743ec8ec46f55b36",
+      "data/processed/baseline_k10/X_test_linear.npz": "fd2c428aba7e02adcaf7f614e8eabd096e245c82fc5bcfff22fe766e63064296",
+      "data/processed/baseline_k10/X_test_tree.npz": "59f619ca36548b57cd0451e50b021020f9b1d09e3e96488b85f548e3f87e0a29",
+      "data/processed/baseline_k10/X_train_linear.npz": "6c468af5aecd1d2bea0b4e2635a3cca709711a6451e048652d53690524d8a192",
+      "data/processed/baseline_k10/X_train_tree.npz": "36c87be9f38794fe837ae7112c1c627b3f60d731f08557480227ef75d5391c2d",
+      "data/processed/baseline_k10/case_features_k10.parquet": "2600f00f0c5f7ee6c1d129cc8e5b8081493944601a5d0e7a35692e0dbdc81668",
+      "data/processed/baseline_k10/y_test.npy": "b5c1dc653fe1b102d36502c9bb136263937934e96c1601af634645cc961e1f93",
+      "data/processed/baseline_k10/y_train.npy": "0f79ba4e202caffabd9f4324694570667a17a03b20264ec610ac483125964ec5",
+      "data/processed/shap_pilot_v1/base_values_success.npy": "b833d9c5629af02f4ee2fb52c3338e15722526204238cca59e1ddc06285200fb",
+      "data/processed/shap_pilot_v1/batches/batch_000.json": "b4f830342b002d906d2bfb0771ab2d71441e46cc36956bbb36f75934bf6e2f90",
+      "data/processed/shap_pilot_v1/batches/batch_000.npz": "a0ec180a8bab294bfb69a8d8d599b4952042bcc70b2fbbd6cc254d9f054c0d74",
+      "data/processed/shap_pilot_v1/batches/batch_001.json": "7eb3a9163208607e7dea4dee2d9687c7d883f3f93a0584f93db6055b7c72d888",
+      "data/processed/shap_pilot_v1/batches/batch_001.npz": "6a3254904e7ebda712860af867a4c66c018a79e756bd6cac43b5d200772696c0",
+      "data/processed/shap_pilot_v1/batches/batch_002.json": "fa8fad37e611647004e2f8754ca602acf15f82956626f1d68cf91da0023a49cd",
+      "data/processed/shap_pilot_v1/batches/batch_002.npz": "7f904ce97c42b03023f3cfdb37454ad276434af2e10d8d11c9915834d15bcf65",
+      "data/processed/shap_pilot_v1/batches/batch_003.json": "288cb6d774826efe9ac908250f2fef4eda3ac08ff9d5b1972be1cd53ac0348cd",
+      "data/processed/shap_pilot_v1/batches/batch_003.npz": "3d236b3f362d6458068f561b544cd2fb1796a50883cd5179f2ca89e362472eef",
+      "data/processed/shap_pilot_v1/batches/batch_004.json": "fee5db9f7e112db5ead5ea062907a093adb06498d034ea47bb74f932020ee146",
+      "data/processed/shap_pilot_v1/batches/batch_004.npz": "0bf4498c6b369a55ded258ac49fd0a4eb6265f09613f61aca8c5f77a40e10a9e",
+      "data/processed/shap_pilot_v1/batches/batch_005.json": "71c54ce68dbaf34cd3df658a699cd7b2a93c92859f15f12fdc3076296db6f799",
+      "data/processed/shap_pilot_v1/batches/batch_005.npz": "2e55f8a5a8b05f7e377fecc0607726d1f1050685fd201d7bf768b7557df1e969",
+      "data/processed/shap_pilot_v1/batches/batch_006.json": "bea33a27a4fa9274d5d58a1cb720bd6a5942a69e1c03717575a8751d338f15c0",
+      "data/processed/shap_pilot_v1/batches/batch_006.npz": "ec1f867cb6b7f1d3da72a8b0fe602764dfd51220d4ad57cb248f6175d6200c6b",
+      "data/processed/shap_pilot_v1/batches/batch_007.json": "a1ac684b62689430e4630f2dea7df9609638e5bbd3667251c1e1f9be1578e094",
+      "data/processed/shap_pilot_v1/batches/batch_007.npz": "44b17c25d035d459062071687395fc12553964442b3dcddcd8fdd27903118150",
+      "data/processed/shap_pilot_v1/batches/batch_008.json": "8bf84713448e0a17eeeb39d11fb3ad45ff4bb1df6a211426fc43deb06eb206ef",
+      "data/processed/shap_pilot_v1/batches/batch_008.npz": "b972290f335ee00af996425651456472172cff0fac8e2bfc6528b3fa0ab221ef",
+      "data/processed/shap_pilot_v1/batches/batch_009.json": "b6f97ba43ee27ced95251d757d79051e2cd25ed9b812c7a9f1fed66629f89dfd",
+      "data/processed/shap_pilot_v1/batches/batch_009.npz": "8d001759e05c03d360334577db4e684595cf3daa2bdfd7fe4eb44270d462f28a",
+      "data/processed/shap_pilot_v1/batches/batch_010.json": "6020288964410f5a169a273d09f9de024c9738032658c9171f9be68e1c78be9e",
+      "data/processed/shap_pilot_v1/batches/batch_010.npz": "74a0bc0a1d128d7073570d52d51ab51b6c12d8a34363b091070b6c25b2fe008a",
+      "data/processed/shap_pilot_v1/batches/batch_011.json": "755ebd5a9c054228e57e877713bb9c5102ad7deed092fe8697d21fc60ad9d74f",
+      "data/processed/shap_pilot_v1/batches/batch_011.npz": "11cea8448c0e870f9280048ad4a7462548237f75791654b395045805c589cffe",
+      "data/processed/shap_pilot_v1/batches/batch_012.json": "49bdb732888dec6aca856ce1690d9d5765cc270c768a22a77270d5b47049db39",
+      "data/processed/shap_pilot_v1/batches/batch_012.npz": "d7691e88203d04e0888bc87be4e7c8d0b6764299896e3fcf82a766ab54fb55e1",
+      "data/processed/shap_pilot_v1/batches/batch_013.json": "bfd6f5ff6aadc04aa19e59b37bf996272b333fde21cbfc718ad56c39a5a7b0b1",
+      "data/processed/shap_pilot_v1/batches/batch_013.npz": "e81f7b124c550e21337275043ed7136cb7d95f14f7aadc67b349df2a9e9d99aa",
+      "data/processed/shap_pilot_v1/batches/batch_014.json": "973bce57cb05b5d78f0510ae7eefa68344b9eb7f18d433ab709cd62b82674b50",
+      "data/processed/shap_pilot_v1/batches/batch_014.npz": "ffad0ea4b0d233ec0e41347a5b47670accc4ec2c8b96e0e57c4287053539c8fc",
+      "data/processed/shap_pilot_v1/batches/batch_015.json": "a078b46c9bcf5686f70e1d95572a5fe4cda71f49fac0022a007a4f81abfa25be",
+      "data/processed/shap_pilot_v1/batches/batch_015.npz": "1e2ba85f8ec0cb9b79fab6e8d6d84041b9458b69fd57998a4a24cba465d87613",
+      "data/processed/shap_pilot_v1/batches/batch_016.json": "8ceecbb5706d86c28f666ba26c36451587a84c14e3717e8cccb813f21442f761",
+      "data/processed/shap_pilot_v1/batches/batch_016.npz": "b832f4a80e48bdb7dadea254ca4e5127b23b6d9b2f5c9dd957a955421ecf0748",
+      "data/processed/shap_pilot_v1/batches/batch_017.json": "20f1c75112356f76097fd3e4e5485d38cd7a8d9240b59f1ef97d099a1196b428",
+      "data/processed/shap_pilot_v1/batches/batch_017.npz": "25c15e23f58ecf62b43d490a667f639bdab4ff0ad531f63fc91605dc12ef8614",
+      "data/processed/shap_pilot_v1/batches/batch_018.json": "64d5eb32f62c9e5f04aa1426ecb0ff57a837cbccf460dba8c107676536a43fd7",
+      "data/processed/shap_pilot_v1/batches/batch_018.npz": "4e93706641acdd54baa15f16d9749dfdfb10aa1386774b4a5fbb07a797443a85",
+      "data/processed/shap_pilot_v1/batches/batch_019.json": "3fb6cc90ed81972dbfeef51e47a31313ee3a3de893ab6b84c213f0320f940ed1",
+      "data/processed/shap_pilot_v1/batches/batch_019.npz": "17b5f880cfb7fe480c856bd4ba772d1b3dcd9b65c33e60362bc4f612a0dda572",
+      "data/processed/shap_pilot_v1/batches/interrupted_attempts/host_suspension_20260917/batch_015.json": "d5c180d80885bab4a67e49956eff03581c4039c0ff9c68f2ccfd19cab1adf899",
+      "data/processed/shap_pilot_v1/batches/interrupted_attempts/host_suspension_20260917/batch_015.npz": "1e2ba85f8ec0cb9b79fab6e8d6d84041b9458b69fd57998a4a24cba465d87613",
+      "data/processed/shap_pilot_v1/model_probabilities_success.npy": "8cd77ce1b77fbaed8a37d5ed63e328f0fb5e6ed9c11fac98db019d47729f0c6c",
+      "data/processed/shap_pilot_v1/shap_values_success.npy": "a01994419b95950b5c1b6446c841d82d0715669ac0ff17e4b6fad9bfdf79da03",
+      "docs/temporal_evaluation_design_v1.md": "c1cf740febf14c30d01503511d345373ebcc7bb61be59df31b4f81ec91172286",
+      "results/baseline_v1/baseline_metrics.csv": "1b44d8f8807b1e4fc9281b7f6704348b9b56105a97e2da3efdbb616cac180f0d",
+      "results/baseline_v1/baseline_metrics.json": "40855b6e3a43ab0742abda6c125fe86c77983df29a49501b9dd44a169bb535b7",
+      "results/baseline_v1/baseline_v1.md": "a667b1ad8ee2695dbd7774ae899e0c9891a971271c95d0d3e2c5a91941ccd554",
+      "results/baseline_v1/confusion_matrix_dummy.png": "71845269ec76b0aaf0849dafd9b42f36d4903b97f77561e7b82e914eededee36",
+      "results/baseline_v1/confusion_matrix_logistic.png": "57ac00b318dacdcbb0a5104304d1934c7b908676acdab41cfab66baa813ccd92",
+      "results/baseline_v1/confusion_matrix_random_forest.png": "3075a5531adbe1a3e8f8e5a7f3023e5d7a94a82d76eeb86158b46e46ae4d43cc",
+      "results/baseline_v1/dummy_metrics.json": "4eea90f2d4350ba7c8bcb267a3a67e82de7d244c7edef01e8961bbfc3c4f67a1",
+      "results/baseline_v1/dummy_predictions.csv": "3e4204d72866e5a88c52cc63ed65dfb9ff6065b42fcd2e331d6d9d7d9d24d157",
+      "results/baseline_v1/eligibility_summary.json": "674f9b389e5f4e05a6a96db355645d0cebdddc858a89efd2355ddaffc5cbce66",
+      "results/baseline_v1/eligible_cases_k10.csv": "ec2a6be8a7d7637f381b8424687e34145bff1962706ba024afb4a5c50ade09b9",
+      "results/baseline_v1/feature_manifest.json": "3be21eff91574b7affb7636e5f96c9766a504ddc89ab343ca0cbd25200384a16",
+      "results/baseline_v1/feature_names_linear.csv": "1a5ac656d7eeacb711041a711f32f54d93ebd18d3be46367c59b059961f3ce93",
+      "results/baseline_v1/feature_names_tree.csv": "1a5ac656d7eeacb711041a711f32f54d93ebd18d3be46367c59b059961f3ce93",
+      "results/baseline_v1/logistic_coefficients.csv": "8e9b3d6f032529c14be0d071bd037e364d9dfa622e7faf8bede058361f670dc6",
+      "results/baseline_v1/logistic_metrics.json": "eb3b12e0484c4ea910254263e95d534f75b81d09e19dcbd6db4c6f580f7a01c4",
+      "results/baseline_v1/logistic_predictions.csv": "46ecf2f29cbb3ac1e19a5a8c8e6715886d53a4990560140f6f8edc22fd0485a8",
+      "results/baseline_v1/pr_curve.png": "fb822b70b8637b64aa0510190cb7524a56950bc566ddbe6375f5682ffaf4fcb8",
+      "results/baseline_v1/preprocessing_manifest.json": "e7c0cdcfae7d1d8d32d340371d31209fad0c8c4d33269822f07bea6257cf702f",
+      "results/baseline_v1/random_forest_feature_importances.csv": "8431b6ee42848360086b2b2596d4424048769124daf6d4174780f7177c941c06",
+      "results/baseline_v1/random_forest_metrics.json": "f050c623e0bb2a7c25a570c252db930610322a05ba678d9383bc2d15a2e8a743",
+      "results/baseline_v1/random_forest_predictions.csv": "425c12180e62617c716bbd0f9cadf3fb249c1c244c90fa9157cdf9e111d6d837",
+      "results/baseline_v1/roc_curve.png": "92b8954fb0a8b88fe105276d5309e9babcdc3b65f82c51f838820b88057798dc",
+      "results/baseline_v1/split_summary.json": "79e4e1cf28ceae8d412cbf5723a81b6a6e87a926545574e67642affa05c853c1",
+      "results/baseline_v1/test_case_ids.csv": "a16351af6ed5d7c297ba9f652f05079c66925c3591f5de11f93530129cd90125",
+      "results/baseline_v1/train_case_ids.csv": "eebf72befbbd3f5f2b9dc6f46f400224e487a3ad66379e250f68b741f6d5bff3",
+      "results/shap_pilot_v1/background_case_ids.csv": "48c9da113578ba0fd18dda62fb58fc7ccbc3e4202b1d901932cca934020b31d6",
+      "results/shap_pilot_v1/explained_case_ids.csv": "48586afd205f9c09e27121e97710f043e2310be905c7788820ee0b784be44b72",
+      "results/shap_pilot_v1/full_shap_case_metadata.csv": "4787f1696a0628514cf3c15da616f5da34c44312c86b0214f6a3abd54aee67e1",
+      "results/shap_pilot_v1/full_shap_manifest.json": "39beca2b5791df91a001b906acb44da3c0f4d5f797cb278c2df036e0ddac6b1b",
+      "results/shap_pilot_v1/global_shap_group_importance.csv": "741bb1da06998a938b130629069516065bb14eb53c73cef2002a30031b0845c1",
+      "results/shap_pilot_v1/global_shap_importance.csv": "b9e8538fd431694b49648962b0f17e6f9a27da8e135c96658689d5e90a5a10c4",
+      "results/shap_pilot_v1/local_examples.csv": "a84e9f03ef1c135a79b869146fcc30b7fb5f41decce5567aff510b7b86d5fd4d",
+      "results/shap_pilot_v1/local_feature_contributions.csv": "b6a5d2192822f99ad33a82b901cf1b0895a985892cac57ebd4d38f4f15bce0cc",
+      "results/shap_pilot_v1/local_fn_waterfall.png": "68a6d5e6f826c4ee450b223e344acf663504dd781ff1d18d2b1150a84d7fcb52",
+      "results/shap_pilot_v1/local_fp_waterfall.png": "0d25d70d3b162e906f0766da91e6283bc59ffa45cce663f0f87d4b2d8df904cd",
+      "results/shap_pilot_v1/local_tn_waterfall.png": "2bfef7250cc79931c6dd41205a7a7cbfb9f190ba2d9b2f0b260c71c85110cf31",
+      "results/shap_pilot_v1/local_tp_waterfall.png": "e88409bf382fa8cde8600878cdabcc423a134aad536c63df4185a3b61e698193",
+      "results/shap_pilot_v1/model_freeze_manifest.json": "935b43b031b3703b3af6f2f73ec70eb5fc9ae04fc990566d526311a2ba2edd68",
+      "results/shap_pilot_v1/report_manifest.json": "a6276f71d838cbf19369d5029a25efa3f7c282ff2ebf99bc35dca90162dc498b",
+      "results/shap_pilot_v1/sample_manifest.json": "6b38178f6349be8d3fcd7be6919e8cc3f1cffe317d119e378ef765fa28dbc0da",
+      "results/shap_pilot_v1/shap_additivity_check.csv": "2ff2732a1c2b65c146b480b555cec1dad4a3e57b78e80cca00f694faf32d9763",
+      "results/shap_pilot_v1/shap_batch_runtime.csv": "92d763bcd7b3089ccadb81d4a629160e7c0532e70e112c07f104dbdfa1223f85",
+      "results/shap_pilot_v1/shap_beeswarm.png": "b95f2c9c62decc8e257b15e003b9e6cabd7fce0053608aabe93f46bdefe9ab58",
+      "results/shap_pilot_v1/shap_core_manifest.json": "8b8d7e6cfe50a02c25f2341a2b4684a8de726d27fe309c7e1d6b43d4fa3da839",
+      "results/shap_pilot_v1/shap_core_resolution.json": "9bd575b2491b4b8a20d0e143b3105cb9a4b0ca5a9f68e381730ccc75ab9de613",
+      "results/shap_pilot_v1/shap_global_bar.png": "43382fa681103e750061bfc2afac2dcac2553e172026114992b3f7f0be04c3ed",
+      "results/shap_pilot_v1/shap_pilot_v1.md": "589caaa84dae2b87cf968779b438a0180eebd1a704f5b5b3675c0c332e0f3a14",
+      "results/shap_pilot_v1/shap_smoke_case_ids.csv": "387e874734ce98e2f5330fa8faaba4cdb637cd00399c78d9976593e79bb41d3a",
+      "results/temporal_eval_v1/temporal_prediction_deltas.csv": "61a1bec048409975ccb48ccfa1ba62e7ef0d73727bcc604262781f588ad61938",
+      "results/temporal_eval_v1/temporal_prediction_metrics.csv": "e6b651aecccd79bc44c8603fa18e816ba98515881f86d6b42df4593963273c76",
+      "results/temporal_eval_v1/temporal_prediction_metrics.png": "c9d6aa0c0770d4db65bc26ec20b5777df3e14df29c8730855d63db784184d289",
+      "results/temporal_eval_v1/temporal_prediction_summary.json": "c31d5da580658ee1c295783a1bbed4d2173227530c48310c39802bb531084cb1",
+      "results/temporal_eval_v1/temporal_probability.png": "e4d2105b604e3128c3a900b83c6f832044d93678c0d067188730fd5b868f8613",
+      "results/temporal_eval_v1/temporal_shap_windows.csv": "98607530eadfad322fb2f82bb0ae608b361312bb3de7acf090966bd3d28033e4",
+      "results/temporal_eval_v1/temporal_window_summary.json": "1710c13b0637934873ad4e6e0ae7db369887a9a6b21f45861cd24ec11f89fa8d",
+      "results/temporal_eval_v1/temporal_windows.csv": "5f2b4b14fa70d5467ce57e767f88edd603e68a503ec64feed81ef56d35a04c03"
+    }
+  },
+  "generated_artifact_sha256_excluding_summary": {
+    "results/temporal_eval_v1/temporal_shap_importance.csv": "7719000730ccebf0e498593750c370d75afa2a07ec8480ef3705f1c356ac5a30",
+    "results/temporal_eval_v1/temporal_shap_top10.csv": "ef514d1dd6a50155c45b4fb7c97ebff517b0ea7aeb033c5b76378ce78df70b10",
+    "results/temporal_eval_v1/temporal_shap_stability.csv": "cb7407e7bc0e47913dd8d0958b87dcc4ad43ccb694ee402a312bac4d7ce2c063",
+    "results/temporal_eval_v1/temporal_signed_shap.csv": "071f41bcb09a4723f0b3b0afa6dc05c4469f95d4435e68bdfe2020217548b737",
+    "results/temporal_eval_v1/temporal_group_importance.csv": "f23426f0218e3e1d25b58303a697adf5996e46a420c7451949705dbbacb64b60",
+    "results/temporal_eval_v1/temporal_shap_top_features.png": "cbc62973b1f9538292bc47ec8ba43d447d47d9d5c38d3972741aae9c54517c7c",
+    "results/temporal_eval_v1/temporal_shap_heatmap.png": "224e222bb8a916213c8e0897ef2292f5ffb78a6567263b286d9f73881ead8472",
+    "results/temporal_eval_v1/temporal_group_importance.png": "bb21b5e6290a8215cf2000f4a1d069421512b97134a3876b60cf358099cdbced"
+  }
+}

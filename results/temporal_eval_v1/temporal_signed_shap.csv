@@ -1,0 +1,12 @@
+feature,T1_mean_signed_shap,T2_mean_signed_shap,T3_mean_signed_shap,T1_sign,T2_sign,T3_sign,sign_change_T1_T2,sign_change_T2_T3,sign_change_T1_T3
+requested_amount,-0.0026007703245639903,-0.00014416015437421209,-0.0020126648885133718,negative,negative,negative,False,False,False
+mean_event_gap_seconds,-0.00016925207545864478,-0.00078013322847479856,-0.0018832375869280511,negative,negative,negative,False,False,False
+prefix_duration_seconds,-0.0005093086614959833,-0.0013772929201567874,-0.0018878711020519235,negative,negative,negative,False,False,False
+activity::A_Submitted,-0.0011143104379407397,-7.7467635081251011e-05,-0.0028134052103668287,negative,negative,negative,False,False,False
+resource::User_1,-0.0016012106660690003,-5.7480554899451806e-05,-0.0033350888046889291,negative,negative,negative,False,False,False
+activity::W_Handle leads,-0.0017421473486201652,-0.00061611647790070511,-0.0029209604283061416,negative,negative,negative,False,False,False
+n_unique_resources,-5.3358526211309674e-05,-0.00022227186685379641,-0.0020231686488585408,negative,negative,negative,False,False,False
+loan_goal_Home improvement,0.0003855584366390515,0.00035241902712870242,0.00010740157275093012,positive,positive,positive,False,False,False
+loan_goal_Car,-0.00055051819545331928,0.00017899792590766303,-0.001425346111580259,negative,positive,negative,True,True,False
+application_type_New credit,-0.00081395491510651312,0.0003181356329294133,-0.00097725580376103126,negative,positive,negative,True,True,False
+application_type_Limit raise,-0.00067759320327946486,0.00041878805829805732,-0.00078053089123641332,negative,positive,negative,True,True,False
